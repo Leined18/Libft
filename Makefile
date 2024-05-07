@@ -36,10 +36,28 @@ OBJS_FILES			= $(SRCS_FILES:%.c=%.o)
 OBJS_BONUS_FILES	= $(BONUS_FILES:%.c=%.o)
 NBONUS				= .bonus
 
+
+# Colors
+
+BOLD_PURPLE	= \033[1;35m
+BOLD_CYAN	= \033[1;36m
+BOLD_YELLOW	= \033[1;33m
+NO_COLOR	= \033[0m
+DEF_COLOR 	= \033[0;39m
+GRAY 		= \033[0;90m
+RED 		= \033[0;91m
+GREEN		= \033[0;92m
+YELLOW 		= \033[0;93m
+BLUE 		= \033[0;94m
+MAGENTA 	= \033[0;95m
+CYAN 		= \033[0;96m
+WHITE		= \033[0;97m
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
+	echo "$(GREEN)\nlibft.a compiled!$(DEF_COLOR)"
 
 $(NBONUS): $(OBJS_BONUS) $(NAME)
 	$(AR) $(NAME) $(OBJS_BONUS)
@@ -47,12 +65,13 @@ $(NBONUS): $(OBJS_BONUS) $(NAME)
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 	[ -d $(OBJS_DIR) ] | mkdir -p $(OBJS_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	printf "\33[2K\r$(GRAY)$(CC) $(CFLAGS) -c $< -o $@$(DEF_COLOR)"
 
 bonus : $(NBONUS)
 
 clean:
 	$(RM) $(OBJS_DIR) $(NBONUS)
+	echo "\nlibft$(YELLOW) cleaned$(DEF_COLOR)"
 
 fclean: clean
 	$(RM) $(NAME)
