@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 16:56:35 by danpalac          #+#    #+#              #
-#    Updated: 2024/06/10 18:16:36 by danpalac         ###   ########.fr        #
+#    Updated: 2024/06/12 10:23:11 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,11 @@ TO_FILES	:= ft_atoi ft_itoa ft_tolower ft_toupper
 STR_FILES	:= ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp \
 			ft_strnstr ft_strrchr ft_strtrim ft_substr
 LST_FILES	:= ft_lstnew_bonus ft_lstadd_front_bonus ft_lstsize_bonus ft_lstlast_bonus ft_lstadd_back_bonus \
-		  	ft_lstdelone_bonus ft_lstclear_bonus ft_lstiter_bonus ft_lstmap_bonus 
+		  	ft_lstdelone_bonus ft_lstclear_bonus ft_lstiter_bonus ft_lstmap_bonus
+PRINTF_FILES	:= ft_printf
+PRINTF_PUT_FILES := ft_putaddr ft_putbase_fd ft_putchar ft_puthexa ft_putnbr ft_putstr ft_putunsigned
+MATH_FILES	:= ft_abs
+GET_FILES := get_next_line
 
 
 ##==========DIRECTORIES=======================================================#
@@ -64,6 +68,10 @@ MEM_DIR := mem/
 PUT_DIR := put/
 STR_DIR := str/
 TO_DIR := to/
+PRINTF_DIR := printf/
+PRINTF_PUT_DIR := printf/put/
+MATH_DIR := math/
+GET_DIR := get/
 
 #==========FILES###===========================================================#
 
@@ -73,6 +81,10 @@ SRC_FILES+=$(addprefix $(PUT_DIR), $(PUT_FILES))
 SRC_FILES+=$(addprefix $(TO_DIR), $(TO_FILES))
 SRC_FILES+=$(addprefix $(STR_DIR), $(STR_FILES))
 SRC_FILES+=$(addprefix $(LST_DIR), $(LST_FILES))
+SRC_FILES+=$(addprefix $(PRINTF_DIR), $(PRINTF_FILES))
+SRC_FILES+=$(addprefix $(PRINTF_PUT_DIR), $(PRINTF_PUT_FILES))
+SRC_FILES+=$(addprefix $(MATH_DIR), $(MATH_FILES))
+SRC_FILES+=$(addprefix $(GET_DIR), $(GET_FILES))
 
 SRCS := $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS := $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
