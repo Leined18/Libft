@@ -79,6 +79,7 @@ int					ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
+char				*ft_strtok(char *str, const char *delim);
 char				**ft_split(char const *s, char c);
 char				*ft_strchr(char const *str, int c);
 char				*ft_strdup(char const *src);
