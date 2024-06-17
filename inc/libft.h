@@ -54,6 +54,10 @@ int					ft_memcmp(void const *s1, void const *s2, size_t n);
 void				*ft_memcpy(void *dest, void const *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *str, int c, size_t n);
+void				*ft_memrev(void *ptr, size_t size);
+void				ft_memdel(int arg, ...);
+void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
+
 
 /* ************************************************************************** */
 /*                                  PUT			    				          */
@@ -79,6 +83,7 @@ int					ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
+char				*ft_strrev(const char *str);
 char				*ft_strtok(char *str, const char *delim);
 char				**ft_split(char const *s, char c);
 char				*ft_strchr(char const *str, int c);
