@@ -1,21 +1,21 @@
 #include "libft.h"
 
-void	ft_memdel(int arg, ...)
-{
-	va_list ap;
-	void	*ptr;
 
-    if (arg <= 0)
-        return ;
-	va_start(ap, arg);
-	while (arg--)
-	{
-		ptr = va_arg(ap, void *);
-		if (ptr)
-		{
-			free(ptr);
-			ptr = NULL;
-		}
-	}
-	va_end(ap);
+void ft_memdel(int num_args, ...)
+{
+    va_list ap;
+    void **ptr;
+
+    va_start(ap, num_args);
+    while (num_args > 0)
+    {
+        ptr = va_arg(ap, void **);
+        if (ptr != NULL && *ptr != NULL)
+        {
+            free(*ptr);
+            *ptr = NULL;
+        }
+        num_args--;
+    }
+    va_end(ap);
 }
