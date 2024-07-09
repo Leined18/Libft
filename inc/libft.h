@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/06/12 11:19:45 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/07/09 12:34:16 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,8 @@ void				*ft_memrev(void *ptr, size_t size);
 void				ft_memdel(int arg, ...);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
-
 /* ************************************************************************** */
-/*                                  PUT			    				          */
+/*                                  PUT											*/
 /* ************************************************************************** */
 
 void				ft_putchar_fd(char c, int fd);
@@ -71,9 +70,13 @@ void				ft_error(char *err);
 void				ft_successful(char *success);
 
 /* ************************************************************************** */
-/*                                  TO							              */
+/*                                  TO											*/
 /* ************************************************************************** */
 
+void				ft_bintostr(const char *bin, char *str);
+void				ft_strtobin(const char *str, char *bin);
+void				ft_bintoa(const char *bin, char *ascii, size_t *j);
+void				ft_atobin(unsigned char c, char *ret, size_t *j);
 int					ft_atoi(char const *str);
 char				*ft_itoa(int n);
 int					ft_tolower(int c);
@@ -83,7 +86,7 @@ int					ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
-char				*ft_strrev(const char *str);
+void				ft_strrev(char *str);
 char				*ft_strtok(char *str, const char *delim);
 char				**ft_split(char const *s, char c);
 char				*ft_strchr(char const *str, int c);

@@ -1,24 +1,26 @@
 
 #include "libft.h"
 
-char	*ft_strrev(const char *str)
+void	ft_strrev(char *str)
 {
-	char	*reversed;
 	size_t	len;
 	size_t	i;
+	size_t	j;
+	char	temp;
 
 	if (!str)
-		return (NULL);
-	len = ft_strlen(str);
-	reversed = (char *)malloc(sizeof(char) * (len + 1));
-	if (!reversed)
-		return (NULL);
-	reversed[len] = '\0';
+		return ;
+	len = 0;
+	while (str[len] != '\0')
+		len++;
 	i = 0;
-	while (i < len)
+	j = len - 1;
+	while (i < j)
 	{
-		reversed[i] = str[len - 1 - i];
+		temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
 		i++;
+		j--;
 	}
-	return (reversed);
 }
