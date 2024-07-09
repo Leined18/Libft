@@ -4,7 +4,7 @@ Esta librería contiene varias funciones útiles para manipulación de memoria, 
 
 | Funciones                        | Funciones                        |
 | -------------------------------- | -------------------------------- |
-| 1. Funciones de Caracteres (is) | 2. Funciones de Memoria (mem) |
+| Funciones de Caracteres (is) | Funciones de Memoria (mem) |
 | - [ft_isalpha](https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalpha.c) | - [ft_bzero](https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_bzero.c) |
 | - [ft_isalnum](https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalnum.c) | - [ft_calloc](https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_calloc.c) |
 | - [ft_isascii](https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isascii.c) | - [ft_memchr](https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memchr.c) |
@@ -15,7 +15,7 @@ Esta librería contiene varias funciones útiles para manipulación de memoria, 
 |                                  | - [ft_memrev](https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memrev.c) |
 |                                  | - [ft_memccpy](https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memccpy.c) |
 |                                  | - [ft_memdel](https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memdel.c) |
-| 3. Funciones de Salida (put)   | 4. Funciones de Conversión (to) |
+| Funciones de Salida (put)   | Funciones de Conversión (to) |
 | - [ft_putchar_fd](https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putchar_fd.c) | - [ft_atoi](https://github.com/Leined18/Libft/blob/main/srcs/to/ft_atoi.c) |
 | - [ft_putendl_fd](https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putendl_fd.c) | - [ft_itoa](https://github.com/Leined18/Libft/blob/main/srcs/to/ft_itoa.c) |
 | - [ft_putnbr_fd](https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putnbr_fd.c) | - [ft_tolower](https://github.com/Leined18/Libft/blob/main/srcs/to/ft_tolower.c) |
@@ -24,7 +24,7 @@ Esta librería contiene varias funciones útiles para manipulación de memoria, 
 | - [ft_successful](https://github.com/Leined18/Libft/blob/main/srcs/put/ft_successful.c) | - [ft_atobin](https://github.com/Leined18/Libft/blob/main/srcs/to/ft_atobin.c) |
 |                                  | - [ft_bintostr](https://github.com/Leined18/Libft/blob/main/srcs/to/ft_bintostr.c) |
 |                                  | - [ft_strtobin](https://github.com/Leined18/Libft/blob/main/srcs/to/ft_strtobin.c) |
-| 5. Funciones de Cadenas (str)  | 6. Funciones de Listas (lst)   |
+| Funciones de Cadenas (str)  | Funciones de Listas (lst)   |
 | - [ft_split](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_split.c)        | - [ft_lstnew_bonus](https://github.com/Leined18/Libft/blob/main/srcs/lst/ft_lstnew_bonus.c) |
 | - [ft_strchr](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strchr.c)      | - [ft_lstadd_front_bonus](https://github.com/Leined18/Libft/blob/main/srcs/lst/ft_lstadd_front_bonus.c) |
 | - [ft_strdup](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strdup.c)      | - [ft_lstsize_bonus](https://github.com/Leined18/Libft/blob/main/srcs/lst/ft_lstsize_bonus.c) |
@@ -42,7 +42,7 @@ Esta librería contiene varias funciones útiles para manipulación de memoria, 
 | - [ft_substr](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_substr.c)      |                                  |
 | - [ft_strrncmp](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strrncmp.c)  |                                  |
 | - [ft_strtok](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strtok.c)      |                                  |
-| 7. Funciones de Impresión (printf) | 8. Funciones Auxiliares de Impresión (printf/put) |
+| Funciones de Impresión (printf) | Funciones Auxiliares de Impresión (printf/put) |
 | - [ft_printf](https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_printf.c)   | - [ft_putaddr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putaddr.c) |
 |                                  | - [ft_putbase_fd](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putbase_fd.c) |
 |                                  | - [ft_putchar](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putchar.c) |
