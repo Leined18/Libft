@@ -88,3 +88,4 @@ Esta librería contiene varias funciones útiles para manipulación de memoria, 
 - [ft_puthexa](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_puthexa.c)
 - [ft_putnbr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putnbr.c)
 - [ft_putstr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putstr.c)
+- [ft_putunsigned](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putunsigned.c)
