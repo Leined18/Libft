@@ -42,11 +42,13 @@ Esta librería contiene varias funciones útiles para manipulación de memoria, 
 | - [ft_substr](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_substr.c)      |                                  |
 | - [ft_strrncmp](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strrncmp.c)  |                                  |
 | - [ft_strtok](https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strtok.c)      |                                  |
-| Funciones de Impresión (printf) | Funciones Auxiliares de Impresión (printf/put) |
-| - [ft_printf](https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_printf.c)   | - [ft_putaddr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putaddr.c) |
-|                                  | - [ft_putbase_fd](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putbase_fd.c) |
-|                                  | - [ft_putchar](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putchar.c) |
-|                                  | - [ft_puthexa](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_puthexa.c) |
-|                                  | - [ft_putnbr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putnbr.c) |
-|                                  | - [ft_putstr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putstr.c) |
-|                                  | - [ft_putunsigned](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putunsigned.c) |
+| Funciones de Impresión (printf) / Get_next_line | |
+|   [ft_printf](https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_printf.c)   | |
+|   [ft_putbase_fd](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putbase_fd.c) ||
+|   [ft_putaddr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putaddr.c) | |               
+|   [ft_putchar](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putchar.c) | |                    
+|   [ft_puthexa](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_puthexa.c) | |                  
+|   [ft_putnbr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putnbr.c) | |                
+|   [ft_putstr](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putstr.c) | |
+|   [ft_putunsigned](https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putunsigned.c) | |
+|   [ge_next_line](https://github.com/Leined18/Libft/blob/main/srcs/get/get_next_line.c) | |
