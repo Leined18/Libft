@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/09 12:34:16 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/07/09 13:34:52 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int					ft_memcmp(void const *s1, void const *s2, size_t n);
 void				*ft_memcpy(void *dest, void const *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *str, int c, size_t n);
-void				*ft_memrev(void *ptr, size_t size);
+void				ft_memrev(void *ptr, size_t size);
 void				ft_memdel(int arg, ...);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 

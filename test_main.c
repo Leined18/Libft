@@ -1,19 +1,28 @@
-#include "inc/libft.h"
 #include <stdio.h>
+#include "inc/libft.h"
 #include <string.h>
 
-int	main(void)
-{
-	char str[100] = "Hello World!";
-	char bin[100] = {0};
-	char c = 'j';
-	size_t i = 0;
+int main() {
+    char str[] = "Hello, World!";
+    int arr[] = {1, 2, 3, 4, 5};
 
-	ft_atobin(c, bin, &i);
-	printf("ft_atobin: %s\n", bin);
-	i = 0;
-	ft_strrev(bin);
-	ft_bintoa(bin, &c, &i);
-	printf("ft_bintoa: %c\n", c);
-	return (0);
+    printf("Original string: %s\n", str);
+    ft_memrev(str, strlen(str));
+    printf("Reversed string: %s\n", str);
+
+    printf("Original array: ");
+    for (int i = 0; i < 5; ++i) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    ft_memrev(arr, sizeof(arr));
+
+    printf("Reversed array: ");
+    for (int i = 0; i < 5; ++i) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
 }
