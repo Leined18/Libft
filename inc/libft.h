@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/13 17:40:23 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/07/16 15:24:59 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ void				ft_strtobin(const char *str, char *bin);
 void				ft_bintoa(const char *bin, char *ascii, size_t *j);
 void				ft_atobin(unsigned char c, char *ret, size_t *j);
 int					ft_atoi(char const *str);
+long				ft_atol(const char *str);
 char				*ft_itoa(int n);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
