@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/16 14:42:21 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/16 15:27:21 by danpalac         ###   ########.fr       */
+/*   Created: 2024/07/25 11:37:18 by danpalac          #+#    #+#             */
+/*   Updated: 2024/07/25 12:11:52 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_atol(const char *str)
+int64_t	ft_atoll(const char *str)
 {
-	long	result;
-	int		sign;
+	size_t i;
+	int32_t sign;
+	int64_t out;
 
-	result = 0;
+	i = 0;
 	sign = 1;
-	if (*str == '-')
+	out = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		sign = -1;
-		str++;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	else if (*str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	return (result * sign);
+	while (ft_isdigit(str[i]))
+		out = (out * 10) + (str[i++] - '0');
+	if (str)
+		free((char *)str);
+	return (out * sign);
 }

@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/16 14:42:21 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/16 15:27:21 by danpalac         ###   ########.fr       */
+/*   Created: 2024/07/22 15:36:28 by danpalac          #+#    #+#             */
+/*   Updated: 2024/07/22 15:36:32 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_atol(const char *str)
+int	ft_sqrt(int number)
 {
-	long	result;
-	int		sign;
+	int i;
 
-	result = 0;
-	sign = 1;
-	if (*str == '-')
+	if (number < 4)
+		return (1);
+	i = 2;
+	while (i * i < number)
+		i++;
+	if (i * i > number)
 	{
-		sign = -1;
-		str++;
+		if ((i * i - number) < ((i - 1) * (i - 1) + (-number)))
+			return (i);
 	}
-	else if (*str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	return (result * sign);
+	return (i - 1);
 }

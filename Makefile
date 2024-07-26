@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 16:56:35 by danpalac          #+#    #+#              #
-#    Updated: 2024/07/16 15:25:36 by danpalac         ###   ########.fr        #
+#    Updated: 2024/07/26 21:16:43 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_mems
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful
 
-TO_FILES	:= ft_atoi ft_itoa ft_atol ft_tolower ft_toupper ft_bintoa ft_atobin ft_bintostr ft_strtobin
+TO_FILES	:= ft_atoi ft_itoa ft_atol ft_atoll ft_tolower ft_toupper ft_bintoa ft_atobin ft_bintostr ft_strtobin
 
 STR_FILES	:= ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp \
 			ft_strnstr ft_strrchr ft_strtrim ft_strrev ft_substr ft_strrncmp ft_strtok
@@ -61,7 +61,7 @@ PRINTF_FILES	:= ft_printf
 
 PRINTF_PUT_FILES := ft_putaddr ft_putbase_fd ft_putchar ft_puthexa ft_putnbr ft_putstr ft_putunsigned
 
-MATH_FILES	:= ft_abs
+MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt
 
 GET_FILES := get_next_line
 
