@@ -6,27 +6,29 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:08:54 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/13 17:39:07 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/07/26 20:38:47 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_atobin(unsigned char c, char *ret, size_t *j)
+char	*ft_atobin(unsigned char c)
 {
-	int	k;
+	char	*ret;
+	int		k;
 
-	k = 7;
+	ret = malloc(9);
 	if (!ret)
-		return ;
+		return (NULL);
+	k = 7;
 	while (k >= 0)
 	{
 		if (c & (1 << k))
-			ret[*j] = '1';
+			ret[7 - k] = '1';
 		else
-			ret[*j] = '0';
-		(*j)++;
+			ret[7 - k] = '0';
 		k--;
 	}
-	ret[*j] = '\0';
+	ret[8] = '\0';
+	return (ret);
 }

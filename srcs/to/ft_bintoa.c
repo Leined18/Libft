@@ -6,28 +6,27 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:21:33 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/13 17:38:49 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/07/26 20:50:03 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bintoa(const char *bin, char *ascii, size_t *j)
+char	ft_bintoa(const char *bin)
 {
 	unsigned char	c;
 	int				k;
 
-	if (!bin || !ascii)
-		return ;
+	if (!bin)
+		return ('\0');
 	c = 0;
 	k = 0;
 	while (k < 8)
 	{
 		c <<= 1;
-		if (bin[*j] == '1')
+		if (bin[k] == '1')
 			c |= 1;
-		(*j)++;
 		k++;
 	}
-	*ascii = c;
+	return ((char)c);
 }
