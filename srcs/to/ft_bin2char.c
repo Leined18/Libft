@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bintostr.c                                      :+:      :+:    :+:   */
+/*   ft_bintochar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 11:41:56 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/11 20:54:42 by danpalac         ###   ########.fr       */
+/*   Created: 2024/07/09 11:21:33 by danpalac          #+#    #+#             */
+/*   Updated: 2024/08/11 20:52:25 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_bintostr(const char *bin)
+char	ft_bin2char(const char *bin)
 {
-	size_t	bin_len;
-	size_t	i;
-	size_t	j;
-	char	*str;
+	unsigned char	c;
+	int				k;
 
 	if (!bin)
-		return (NULL);
-	bin_len = ft_strlen(bin);
-	if (bin_len % 8 != 0)
-		return (NULL);
-	str = (char *)malloc((bin_len / 8) + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (j < bin_len)
+		return ('\0');
+	c = 0;
+	k = 0;
+	while (k < 8)
 	{
-		str[i] = ft_bin2char(bin + j);
-		i++;
-		j += 8;
+		c <<= 1;
+		if (bin[k] == '1')
+			c |= 1;
+		k++;
 	}
-	str[i] = '\0';
-	return (str);
+	return ((char)c);
 }

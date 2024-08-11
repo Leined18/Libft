@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bintostr.c                                      :+:      :+:    :+:   */
+/*   ft_fib.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 11:41:56 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/11 20:54:42 by danpalac         ###   ########.fr       */
+/*   Created: 2024/08/11 15:37:58 by danpalac          #+#    #+#             */
+/*   Updated: 2024/08/11 21:01:18 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_bintostr(const char *bin)
+long	ft_fib(long n)
 {
-	size_t	bin_len;
-	size_t	i;
-	size_t	j;
-	char	*str;
-
-	if (!bin)
-		return (NULL);
-	bin_len = ft_strlen(bin);
-	if (bin_len % 8 != 0)
-		return (NULL);
-	str = (char *)malloc((bin_len / 8) + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (j < bin_len)
-	{
-		str[i] = ft_bin2char(bin + j);
-		i++;
-		j += 8;
-	}
-	str[i] = '\0';
-	return (str);
+	if (n <= 1)
+		return (n);
+	return (ft_fib(n - 1) + ft_fib(n - 2));
 }
+
+/*int	main(void)
+{
+	long	n;
+	long	i;
+
+	printf("Enter a number: ");
+	scanf("%ld", &n);
+	i = 1;
+	while (i <= n)
+	{
+		printf("%ld\n", fib_ser(i));
+		i++;
+	}
+}*/

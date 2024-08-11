@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/26 21:16:06 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/08/11 21:01:23 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 /*                                  MATHS										*/
 /* ************************************************************************** */
 
+long				ft_fib(long n);
+long				ft_fact(long n);
 int					ft_index(int n, int *arr);
 void				ins_sort(int array[], int n);
 int					ft_sqrt(int number);
@@ -83,8 +85,8 @@ void				ft_successful(char *success);
 
 char				*ft_bintostr(const char *bin);
 char				*ft_strtobin(const char *str);
-char				ft_bintoa(const char *bin);
-char				*ft_atobin(unsigned char c);
+char				ft_bin2char(const char *bin);
+char				*ft_char2bin(unsigned char c);
 int					ft_atoi(char const *str);
 long				ft_atol(const char *str);
 int64_t				ft_atoll(const char *str);

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bintoa.c                                        :+:      :+:    :+:   */
+/*   ft_chartobin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 11:21:33 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/26 20:50:03 by danpalac         ###   ########.fr       */
+/*   Created: 2024/07/09 11:08:54 by danpalac          #+#    #+#             */
+/*   Updated: 2024/08/11 20:52:16 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_bintoa(const char *bin)
+char	*ft_char2bin(unsigned char c)
 {
-	unsigned char	c;
-	int				k;
+	char	*ret;
+	int		k;
 
-	if (!bin)
-		return ('\0');
-	c = 0;
-	k = 0;
-	while (k < 8)
+	ret = malloc(9);
+	if (!ret)
+		return (NULL);
+	k = 7;
+	while (k >= 0)
 	{
-		c <<= 1;
-		if (bin[k] == '1')
-			c |= 1;
-		k++;
+		if (c & (1 << k))
+			ret[7 - k] = '1';
+		else
+			ret[7 - k] = '0';
+		k--;
 	}
-	return ((char)c);
+	ret[8] = '\0';
+	return (ret);
 }
