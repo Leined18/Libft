@@ -95,7 +95,8 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_index]                       | Encuentra la posición de un valor en un array |
 | [ft_insort]                      | Ordena un array utilizando insertion sort     |
 | [ft_sqrt]                        | Calcula la raíz cuadrada de un número         |
-| [ft_factorial]                   | Calcula el factorial de un número             |
+| [ft_fact]                        | Calcula el factorial de un número             |
+| [ft_fib]                         | Calcula el enésimo número en la secuencia de Fibonacci. |
 
 
 
