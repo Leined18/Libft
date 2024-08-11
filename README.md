@@ -1,71 +1,108 @@
 # Funciones de la librería Libft
 
-Esta librería contiene varias funciones útiles para manipulación de memoria, cadenas, listas, impresión y más. Aquí se detallan las funciones agrupadas por categorías:
+Esta librería contiene varias funciones útiles para la manipulación de memoria, cadenas, listas, impresión y más. Aquí se detallan las funciones agrupadas por categorías:
 
-| Funciones de Caracteres (is) | Funciones de Memoria (mem) |
-| ---------------------------- | -------------------------- |
-| [ft_isalpha]                 | [ft_bzero]                 |
-| [ft_isalnum]                 | [ft_calloc]                |
-| [ft_isascii]                 | [ft_memchr]                |
-| [ft_isdigit]                 | [ft_memcmp]                |
-| [ft_isprint]                 | [ft_memcpy]                |
-|                              | [ft_memmove]               |
-|                              | [ft_memset]                |
-|                              | [ft_memrev]                |
-|                              | [ft_memccpy]               |
-|                              | [ft_memdel]                |
+| Funciones de Caracteres (is) | Descripción                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [ft_isalpha]                 | Comprueba si el carácter es alfabético         |
+| [ft_isalnum]                 | Comprueba si el carácter es alfanumérico       |
+| [ft_isascii]                 | Comprueba si el carácter pertenece a ASCII     |
+| [ft_isdigit]                 | Comprueba si el carácter es un dígito          |
+| [ft_isprint]                 | Comprueba si el carácter es imprimible         |
 
-| Funciones de Conversión (to) | Funciones de Salida (put)  |
-| ---------------------------- | -------------------------- |
-| [ft_atoi]                    | [ft_putchar_fd]            |
-| [ft_atobin]                  | [ft_putendl_fd]            |
-| [ft_atol]                    | [ft_putnbr_fd]             |
-| [ft_atoll]                   | [ft_putstr_fd]             |
-| [ft_itoa]                    | [ft_error]                 |
-| [ft_tolower]                 | [ft_successful]            |
-| [ft_toupper]                 |                            |
-| [ft_bintoa]                  |                            |
-| [ft_bintostr]                |                            |
-| [ft_strtobin]                |                            |
+| Funciones de Memoria (mem)   | Descripción                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [ft_bzero]                   | Establece a cero un bloque de memoria          |
+| [ft_calloc]                  | Asigna memoria y la inicializa a cero          |
+| [ft_memchr]                  | Busca un carácter en un bloque de memoria      |
+| [ft_memcmp]                  | Compara bloques de memoria                     |
+| [ft_memcpy]                  | Copia un bloque de memoria                     |
+| [ft_memmove]                 | Mueve un bloque de memoria                     |
+| [ft_memset]                  | Establece un valor en un bloque de memoria     |
+| [ft_memrev]                  | Invierte un bloque de memoria                  |
+| [ft_memccpy]                 | Copia hasta un carácter específico             |
+| [ft_memdel]                  | Libera un bloque de memoria                    |
 
-| Funciones de Cadenas (str)   | Funciones de Listas (lst)  |
-| ---------------------------- | -------------------------- |
-| [ft_split]                   | [ft_lstnew_bonus]          |
-| [ft_strchr]                  | [ft_lstadd_front_bonus]    |
-| [ft_strdup]                  | [ft_lstsize_bonus]         |
-| [ft_striteri]                | [ft_lstlast_bonus]         |
-| [ft_strjoin]                 | [ft_lstadd_back_bonus]     |
-| [ft_strlcat]                 | [ft_lstdelone_bonus]       |
-| [ft_strlcpy]                 | [ft_lstclear_bonus]        |
-| [ft_strlen]                  | [ft_lstiter_bonus]         |
-| [ft_strmapi]                 | [ft_lstmap_bonus]          |
-| [ft_strncmp]                 |                            |
-| [ft_strnstr]                 |                            |
-| [ft_strrchr]                 |                            |
-| [ft_strtrim]                 |                            |
-| [ft_strrev]                  |                            |
-| [ft_substr]                  |                            |
-| [ft_strrncmp]                |                            |
-| [ft_strtok]                  |                            |
+| Funciones de Conversión (to) | Descripción                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [ft_atoi]                    | Convierte una cadena a entero                  |
+| [ft_atobin]                  | Convierte una cadena a binario                 |
+| [ft_atol]                    | Convierte una cadena a long                    |
+| [ft_atoll]                   | Convierte una cadena a long long               |
+| [ft_itoa]                    | Convierte un entero a cadena                   |
+| [ft_tolower]                 | Convierte un carácter a minúscula              |
+| [ft_toupper]                 | Convierte un carácter a mayúscula              |
+| [ft_bintoa]                  | Convierte un binario a cadena                  |
+| [ft_bintostr]                | Convierte un binario a cadena legible          |
+| [ft_strtobin]                | Convierte una cadena a binario                 |
 
-| Funciones de Impresión (printf) / Get_next_line | Funciones de Matemáticas (math) |
-| ----------------------------------------------- | ------------------------------- |
-| [ft_printf]                                     | [ft_abs]                        |
-| [ft_putbase_fd]                                 | [ft_index]                      |
-| [ft_putaddr]                                    | [ft_insort]                     |
-| [ft_putchar]                                    | [ft_sqrt]                       |
-| [ft_puthexa]                                    |                                 |
-| [ft_putnbr]                                     |                                 |
-| [ft_putstr]                                     |                                 |
-| [ft_putunsigned]                                |                                 |
-| [get_next_line]                                 |                                 |
+| Funciones de Cadenas (str)   | Descripción                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [ft_split]                   | Divide una cadena en un array de strings       |
+| [ft_strchr]                  | Busca un carácter en una cadena                |
+| [ft_strdup]                  | Duplica una cadena                             |
+| [ft_striteri]                | Itera sobre una cadena con índice              |
+| [ft_strjoin]                 | Une dos cadenas en una sola                    |
+| [ft_strlcat]                 | Concatenación segura de cadenas                |
+| [ft_strlcpy]                 | Copia segura de cadenas                        |
+| [ft_strlen]                  | Calcula la longitud de una cadena              |
+| [ft_strmapi]                 | Itera sobre una cadena y aplica una función    |
+| [ft_strncmp]                 | Compara dos cadenas                            |
+| [ft_strnstr]                 | Busca una cadena en otra cadena                |
+| [ft_strrchr]                 | Busca un carácter en una cadena desde el final |
+| [ft_strtrim]                 | Elimina espacios en blanco de una cadena       |
+| [ft_strrev]                  | Invierte una cadena                            |
+| [ft_substr]                  | Extrae una subcadena                           |
+| [ft_strrncmp]                | Compara un número limitado de caracteres       |
+| [ft_strtok]                  | Divide una cadena en tokens                    |
+
+| Funciones de Listas (lst)    | Descripción                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [ft_lstnew_bonus]            | Crea un nuevo nodo de lista                    |
+| [ft_lstadd_front_bonus]      | Añade un nodo al inicio de la lista            |
+| [ft_lstsize_bonus]           | Calcula el tamaño de una lista                 |
+| [ft_lstlast_bonus]           | Obtiene el último nodo de la lista             |
+| [ft_lstadd_back_bonus]       | Añade un nodo al final de la lista             |
+| [ft_lstdelone_bonus]         | Elimina un nodo de la lista                    |
+| [ft_lstclear_bonus]          | Elimina todos los nodos de la lista            |
+| [ft_lstiter_bonus]           | Itera sobre una lista                          |
+| [ft_lstmap_bonus]            | Aplica una función a cada elemento de la lista |
+
+| Funciones de Salida (put)    | Descripción                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [ft_putchar_fd]              | Escribe un carácter en un descriptor de archivo|
+| [ft_putendl_fd]              | Escribe una línea en un descriptor de archivo  |
+| [ft_putnbr_fd]               | Escribe un número en un descriptor de archivo  |
+| [ft_putstr_fd]               | Escribe una cadena en un descriptor de archivo |
+| [ft_error]                   | Muestra un mensaje de error                    |
+| [ft_successful]              | Muestra un mensaje de éxito                    |
+
+| Funciones de Impresión (printf) / Get_next_line | Descripción                      |
+| ----------------------------------------------- | -------------------------------- |
+| [ft_printf]                                     | Imprime un mensaje con formato   |
+| [ft_putbase_fd]                                 | Imprime un número en una base específica |
+| [ft_putaddr]                                    | Imprime una dirección de memoria |
+| [ft_putchar]                                    | Imprime un carácter              |
+| [ft_puthexa]                                    | Imprime un número en hexadecimal |
+| [ft_putnbr]                                     | Imprime un número                |
+| [ft_putstr]                                     | Imprime una cadena               |
+| [ft_putunsigned]                                | Imprime un número sin signo      |
+| [get_next_line]                                 | Lee una línea de un descriptor de archivo |
+
+| Funciones de Matemáticas (math) | Descripción                                   |
+| -------------------------------- | --------------------------------------------- |
+| [ft_abs]                         | Calcula el valor absoluto de un número        |
+| [ft_index]                       | Encuentra la posición de un valor en un array |
+| [ft_insort]                      | Ordena un array utilizando insertion sort     |
+| [ft_sqrt]                        | Calcula la raíz cuadrada de un número         |
+| [ft_factorial]                   | Calcula el factorial de un número             |
+
+
 
 [ft_abs]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_abs.c
 [ft_index]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_index.c
 [ft_insort]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_insort.c
 [ft_sqrt]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_sqrt.c
-
-
 
 [ft_isalpha]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalpha.c
 [ft_isalnum]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalnum.c
@@ -139,4 +176,3 @@ Esta librería contiene varias funciones útiles para manipulación de memoria, 
 [ft_putstr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putstr.c
 [ft_putunsigned]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putunsigned.c
 [get_next_line]: https://github.com/Leined18/Libft/blob/main/srcs/get/get_next_line.c
-
