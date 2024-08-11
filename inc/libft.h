@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/11 21:01:23 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/08/11 21:21:16 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include <limits.h>
+# include <math.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>

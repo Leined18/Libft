@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 16:56:35 by danpalac          #+#    #+#              #
-#    Updated: 2024/08/11 20:56:26 by danpalac         ###   ########.fr        #
+#    Updated: 2024/08/11 21:17:18 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ PRINTF_FILES	:= ft_printf
 
 PRINTF_PUT_FILES := ft_putaddr ft_putbase_fd ft_putchar ft_puthexa ft_putnbr ft_putstr ft_putunsigned
 
-MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib 
+MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib ft_fact 
 
 GET_FILES := get_next_line
 
