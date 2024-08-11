@@ -99,7 +99,8 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_fib]                         | Calcula el enésimo número en la secuencia de Fibonacci. |
 
 
-
+[ft_fact]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_fact.c
+[ft_fib]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_fib.c
 [ft_abs]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_abs.c
 [ft_index]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_index.c
 [ft_insort]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_insort.c
