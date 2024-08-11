@@ -42,7 +42,7 @@ MKDIR 		:= mkdir -p
 #==========SOURCES============================================================#
 
 
-IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint
+IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace
 
 MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset\
 			   ft_memrev ft_memccpy ft_memdel
