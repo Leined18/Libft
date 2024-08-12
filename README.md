@@ -10,6 +10,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_isdigit]                 | Comprueba si el carácter es un dígito          |
 | [ft_isprint]                 | Comprueba si el carácter es imprimible         |
 | [ft_isspace]                 | Comprueba si el carácter es un espacio         |
+| [ft_isspace]                 | Comprueba si un array de numeros tiene numeros duplicados|
 
 | Funciones de Memoria (mem)   | Descripción                                    |
 | ---------------------------- | ---------------------------------------------- |
