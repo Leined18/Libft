@@ -12,13 +12,11 @@
 
 #include "libft.h"
 
-void	ft_error(char *err, int fd)
+void	ft_error(char *err, t_bool yeet)
 {
-	ft_putstr_fd("\x1b[31mError\x1b[0m\n", fd);
-	if (err && *err)
-	{
-		ft_putstr_fd(err, fd);
-		write(fd, "\n", 1);
-	}
-	exit(EXIT_FAILURE);
+	write(2, "\033[1;31m", 7);
+	write(2, err, ft_strlen(err));
+	write(2, "\033[0m", 4);
+	if (yeet)
+		exit(EXIT_FAILURE);
 }
