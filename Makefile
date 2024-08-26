@@ -12,19 +12,44 @@
 
 #==========COLOURS=============================================================#
 
-BOLD_PURPLE	= \033[1;35m
-BOLD_CYAN	= \033[1;36m
-BOLD_YELLOW	= \033[1;33m
-NO_COLOR	= \033[0m
-DEF_COLOR 	= \033[0;39m
-GRAY 		= \033[0;90m
-RED 		= \033[0;91m
-GREEN		= \033[0;92m
-YELLOW 		= \033[0;93m
-BLUE 		= \033[0;94m
-MAGENTA 	= \033[0;95m
-CYAN 		= \033[0;96m
-WHITE		= \033[0;97m
+# Basic Colors
+
+BLACK       = \033[0;30m
+RED         = \033[0;31m
+GREEN       = \033[0;32m
+YELLOW      = \033[0;33m
+BLUE        = \033[0;34m
+MAGENTA     = \033[0;35m
+CYAN        = \033[0;36m
+WHITE       = \033[0;37m
+
+# Bright Colors
+
+BOLD_BLACK  = \033[1;30m
+BOLD_RED    = \033[1;31m
+BOLD_GREEN  = \033[1;32m
+BOLD_YELLOW = \033[1;33m
+BOLD_BLUE   = \033[1;34m
+BOLD_MAGENTA= \033[1;35m
+BOLD_CYAN   = \033[1;36m
+BOLD_WHITE  = \033[1;37m
+
+# Extended Colors (256 colors)
+ORANGE      = \033[38;5;208m
+WINE        = \033[38;5;88m
+LIME        = \033[38;5;190m
+TURQUOISE   = \033[38;5;38m
+LIGHT_PINK  = \033[38;5;13m
+DARK_GRAY   = \033[38;5;235m
+LIGHT_RED   = \033[38;5;203m
+LIGHT_BLUE  = \033[38;5;75m
+
+
+# Reseteo de color
+NO_COLOR    = \033[0m
+DEF_COLOR   = \033[0;39m
+CLEAR_LINE  = \033[2K
+MOVE_UP     = \033[1A
 
 #==========NAMES===============================================================#
 
@@ -38,6 +63,25 @@ RM			:= rm -rf
 AR			:= ar rcs
 LIB			:= ranlib
 MKDIR 		:= mkdir -p
+
+
+##==========DIRECTORIES=======================================================#
+
+INCLUDES := inc/
+SRC_DIR := srcs/
+OBJ_DIR := obj/
+
+IS_DIR := is/
+LST_DIR := lst/
+MEM_DIR := mem/
+PUT_DIR := put/
+STR_DIR := str/
+TO_DIR := to/
+PRINTF_DIR := printf/
+PRINTF_PUT_DIR := printf/put/
+MATH_DIR := math/
+GET_DIR := get/
+
 
 #==========SOURCES============================================================#
 
@@ -65,24 +109,6 @@ MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib ft_fact
 
 GET_FILES := get_next_line
 
-
-##==========DIRECTORIES=======================================================#
-
-INCLUDES := inc/
-SRC_DIR := srcs/
-OBJ_DIR := obj/
-
-IS_DIR := is/
-LST_DIR := lst/
-MEM_DIR := mem/
-PUT_DIR := put/
-STR_DIR := str/
-TO_DIR := to/
-PRINTF_DIR := printf/
-PRINTF_PUT_DIR := printf/put/
-MATH_DIR := math/
-GET_DIR := get/
-
 #==========FILES###===========================================================#
 
 SRC_FILES+=$(addprefix $(IS_DIR), $(IS_FILES))
@@ -105,25 +131,28 @@ DEPS := $(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 all: $(NAME)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c Makefile
-	@$(MKDIR) $(dir $@)
+	@mkdir -p $(dir $@)
+	@printf "%b" "$(BOLD_CYAN)[LIBFT]:\t$(DEF_COLOR)$(BOLD_GREEN)$<$(DEF_COLOR)\r"
 	@$(CC) $(CFLAGS) -I$(INCLUDES) -MMD -MP -c $< -o $@
+	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)\r"
 
 $(NAME) : $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@echo "$(GREEN)\n ✓ Compiled $(NAME)\n$(WHITE)"
+	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)"
+	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
 
-clean : 
+clean: 
 	@$(RM) -rf $(OBJ_DIR) a.out
-	@echo "$(RED)\n ✗ Files object libft erased.‼️\n$(WHITE)";
+	@printf "%b" "$(BLUE)[LIBFT]:\tobject files$(DEF_COLOR)$(GREEN)  => Cleaned!$(DEF_COLOR)\n"
 
-fclean : clean
-	@$(RM) -f $(NAME) main.c
-	@echo "$(GREEN) everything cleaned...$(WHITE)"
+fclean: clean
+	@$(RM) $(NAME)
+	@printf "%b" "$(CYAN)[LIBFT]:\texec. files$(DEF_COLOR)$(GREEN)  => Cleaned!$(DEF_COLOR)\n"
 
 re: fclean all
 
 norm:
-	@norminette $(SRCS) $(INCLUDES) | grep -v Norme -B1 || true
+	@norminette $(SRC) $(INCLUDE) | grep -v Norme -B1 || true
 
 -include $(DEPS)
 
