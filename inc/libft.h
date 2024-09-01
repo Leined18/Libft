@@ -117,8 +117,6 @@ int						ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 char					*ft_straddc(char *str, char c);
 void					ft_strrev(char *str);
 char					*ft_strtok(char *str, const char *delim);
