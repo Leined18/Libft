@@ -79,7 +79,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_putstr_fd]               | Escribe una cadena en un descriptor de archivo |
 | [ft_error]                   | Muestra un mensaje de error                    |
 | [ft_successful]              | Muestra un mensaje de éxito                    |
-| [ft_putstr_color_fd]         | Escribe una cadena en un descriptor de archivo con color |
+| [ft_putstr_color_fd]         | Escribe una cadena con color en un descriptor de archivo |
 
 | Funciones de Impresión (printf) / Get_next_line | Descripción                      |
 | ----------------------------------------------- | -------------------------------- |
