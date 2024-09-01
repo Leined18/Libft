@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/12 11:53:15 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/01 20:22:15 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ int						ft_sqrt(int number);
 /*                                  PUT										*/
 /* ************************************************************************** */
 
+void					ft_putstr_color_fd(char *color, char *s, int fd);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putendl_fd(char *s, int fd);
 void					ft_putnbr_fd(int n, int fd);
@@ -115,6 +116,9 @@ int						ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char					*ft_straddc(char *str, char c);
 void					ft_strrev(char *str);
 char					*ft_strtok(char *str, const char *delim);
 char					**ft_split(char const *s, char c);
