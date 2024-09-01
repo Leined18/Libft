@@ -57,6 +57,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_substr]                  | Extrae una subcadena                           |
 | [ft_strrncmp]                | Compara un número limitado de caracteres       |
 | [ft_strtok]                  | Divide una cadena en tokens                    |
+| [ft_straddc]                 | Añade un carácter al final de una cadena.      |
 
 | Funciones de Listas (lst)    | Descripción                                    |
 | ---------------------------- | ---------------------------------------------- |
@@ -162,6 +163,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 [ft_substr]: https://github.com/Leined18/Libft/blob/main/srcs/str/ft_substr.c
 [ft_strrncmp]: https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strrncmp.c
 [ft_strtok]: https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strtok.c
+[ft_straddc]: https://github.com/Leined18/Libft/blob/main/srcs/str/ft_straddc.c
 
 [ft_lstnew_bonus]: https://github.com/Leined18/Libft/blob/main/srcs/lst/ft_lstnew_bonus.c
 [ft_lstadd_front_bonus]: https://github.com/Leined18/Libft/blob/main/srcs/lst/ft_lstadd_front_bonus.c
