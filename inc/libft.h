@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/01 20:22:15 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/01 22:48:19 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void					ft_memrev(void *ptr, size_t size);
 void					ft_memdel(int arg, ...);
 void					*ft_memccpy(void *dst, const void *src, int c,
 							size_t n);
+void					free_2d(char **array);
 
 /* ************************************************************************** */
 /*                                  MATHS										*/
