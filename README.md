@@ -79,6 +79,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_putstr_fd]               | Escribe una cadena en un descriptor de archivo |
 | [ft_error]                   | Muestra un mensaje de error                    |
 | [ft_successful]              | Muestra un mensaje de éxito                    |
+| [ft_putstr_color_fd]         | Escribe una cadena en un descriptor de archivo con color |
 
 | Funciones de Impresión (printf) / Get_next_line | Descripción                      |
 | ----------------------------------------------- | -------------------------------- |
@@ -134,6 +135,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 [ft_putstr_fd]: https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putstr_fd.c
 [ft_error]: https://github.com/Leined18/Libft/blob/main/srcs/put/ft_error.c
 [ft_successful]: https://github.com/Leined18/Libft/blob/main/srcs/put/ft_successful.c
+[ft_putstr_color_fd]: https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putstr_color_fd.c
 
 [ft_atoi]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_atoi.c
 [ft_atobin]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_atobin.c
