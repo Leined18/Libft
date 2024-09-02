@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/09/02 13:45:49 by danpalac         ###   ########.fr       */
-=======
-/*   Updated: 2024/09/01 22:48:19 by danpalac         ###   ########.fr       */
->>>>>>> 770252c320b0b14186c1bfacd2b1a65c0dcfa2a8
+/*   Created: 2024/09/02 14:35:02 by danpalac          #+#    #+#             */
+/*   Updated: 2024/09/02 14:35:21 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,11 +118,6 @@ int						ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
-<<<<<<< HEAD
-# include "libft.h"
-
-=======
->>>>>>> 770252c320b0b14186c1bfacd2b1a65c0dcfa2a8
 char					*ft_straddc(char *str, char c);
 void					ft_strrev(char *str);
 char					*ft_strtok(char *str, const char *delim);
