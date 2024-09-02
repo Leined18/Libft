@@ -6,7 +6,11 @@
 #    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 16:56:35 by danpalac          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2024/09/02 13:31:31 by danpalac         ###   ########.fr        #
+=======
+#    Updated: 2024/09/01 22:48:40 by danpalac         ###   ########.fr        #
+>>>>>>> 770252c320b0b14186c1bfacd2b1a65c0dcfa2a8
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +93,7 @@ GET_DIR := get/
 IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace ft_isndup ft_isstrnum
 
 MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset\
-			   ft_memrev ft_memccpy ft_memdel
+			   ft_memrev ft_memccpy ft_memdel ft_free_2d
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful ft_putstr_color_fd
 

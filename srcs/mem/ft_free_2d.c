@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoll.c                                         :+:      :+:    :+:   */
+/*   ft_free_2d.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 11:37:18 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/01 22:56:05 by danpalac         ###   ########.fr       */
+/*   Created: 2024/09/01 22:42:33 by danpalac          #+#    #+#             */
+/*   Updated: 2024/09/01 22:53:57 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int64_t	ft_atoll(const char *str)
+void	free_2d(char **arr)
 {
-	size_t i;
-	int32_t sign;
-	int64_t out;
+	size_t	i;
 
 	i = 0;
-	sign = 1;
-	out = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (arr)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		while (arr && arr[i])
+		{
+			if (arr[i] != NULL)
+			{
+				free(arr[i]);
+				arr[i] = NULL;
+			}
+			i++;
+		}
+		free(arr);
+		arr = NULL;
 	}
-	while (ft_isdigit(str[i]))
-		out = (out * 10) + (str[i++] - '0');
-	return (out * sign);
 }

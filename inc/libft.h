@@ -6,7 +6,11 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/09/02 13:45:49 by danpalac         ###   ########.fr       */
+=======
+/*   Updated: 2024/09/01 22:48:19 by danpalac         ###   ########.fr       */
+>>>>>>> 770252c320b0b14186c1bfacd2b1a65c0dcfa2a8
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +79,7 @@ void					ft_memrev(void *ptr, size_t size);
 void					ft_memdel(int arg, ...);
 void					*ft_memccpy(void *dst, const void *src, int c,
 							size_t n);
+void					free_2d(char **array);
 
 /* ************************************************************************** */
 /*                                  MATHS										*/
@@ -117,8 +122,11 @@ int						ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
+<<<<<<< HEAD
 # include "libft.h"
 
+=======
+>>>>>>> 770252c320b0b14186c1bfacd2b1a65c0dcfa2a8
 char					*ft_straddc(char *str, char c);
 void					ft_strrev(char *str);
 char					*ft_strtok(char *str, const char *delim);
