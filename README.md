@@ -24,6 +24,8 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_memrev]                  | Invierte un bloque de memoria                  |
 | [ft_memccpy]                 | Copia hasta un carácter específico             |
 | [ft_memdel]                  | Libera un bloque de memoria                    |
+| [ft_free_2d]                 | Libera un array bidimensional                  |
+
 
 | Funciones de Conversión (to) | Descripción                                    |
 | ---------------------------- | ---------------------------------------------- |
@@ -128,6 +130,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 [ft_memrev]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memrev.c
 [ft_memccpy]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memccpy.c
 [ft_memdel]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memdel.c
+[ft_free_2d]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_free_2d.c
 
 [ft_putchar_fd]: https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putchar_fd.c
 [ft_putendl_fd]: https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putendl_fd.c
