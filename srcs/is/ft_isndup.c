@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 11:44:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/12 11:52:45 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/02 12:13:36 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ static t_bool	in_hash_table(t_hash_entry **table, int64_t value)
 	size_t			index;
 	t_hash_entry	*entry;
 
-	if (value < 0)
-		value = -value;
 	index = (size_t)value % TABLE_SIZE;
 	entry = table[index];
 	while (entry != NULL)
@@ -47,8 +45,6 @@ static void	add_to_hash_table(t_hash_entry **table, int64_t value)
 	size_t			index;
 	t_hash_entry	*entry;
 
-	if (value < 0)
-		value = -value;
 	index = (size_t)value % TABLE_SIZE;
 	entry = create_entry(value);
 	entry->next = table[index];
