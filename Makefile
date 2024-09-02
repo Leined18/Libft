@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 16:56:35 by danpalac          #+#    #+#              #
-#    Updated: 2024/09/01 20:23:15 by danpalac         ###   ########.fr        #
+#    Updated: 2024/09/02 13:31:31 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,7 @@ GET_DIR := get/
 #==========SOURCES============================================================#
 
 
-IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace ft_isndup
+IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace ft_isndup ft_isstrnum
 
 MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset\
 			   ft_memrev ft_memccpy ft_memdel

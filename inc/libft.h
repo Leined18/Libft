@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/01 20:22:15 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/02 13:45:49 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int						ft_isdigit(int c);
 int						ft_isprint(int c);
 int						ft_isspace(int c);
 t_bool					ft_isndup(int *num, int size);
+int						ft_isstrnum(char *str);
 
 /* ************************************************************************** */
 /*                                 MEMORY                                     */
@@ -95,7 +96,7 @@ void					ft_putendl_fd(char *s, int fd);
 void					ft_putnbr_fd(int n, int fd);
 void					ft_putstr_fd(char *s, int fd);
 void					ft_error(char *err, t_bool yeet);
-void					ft_successful(char *success);
+void					ft_successful(char *msg, t_bool yeet);
 
 /* ************************************************************************** */
 /*                                  TO										*/
@@ -116,7 +117,7 @@ int						ft_toupper(int c);
 /*                                 STRING                                     */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
 char					*ft_straddc(char *str, char c);
 void					ft_strrev(char *str);
