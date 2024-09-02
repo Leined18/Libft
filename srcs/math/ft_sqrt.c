@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 15:36:28 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/22 15:36:32 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/02 14:52:35 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_sqrt(int number)
 {
-	int i;
+	int	i;
 
 	if (number < 4)
 		return (1);

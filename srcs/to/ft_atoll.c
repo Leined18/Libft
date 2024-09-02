@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 11:37:18 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/01 22:56:05 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/02 14:52:11 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int64_t	ft_atoll(const char *str)
 {
-	size_t i;
-	int32_t sign;
-	int64_t out;
+	size_t	i;
+	int32_t	sign;
+	int64_t	out;
 
 	i = 0;
 	sign = 1;

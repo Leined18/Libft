@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:19:16 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/19 12:19:23 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/02 14:53:15 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_index(int n, int *arr)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (arr[i] != n)

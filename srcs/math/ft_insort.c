@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:28:03 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/19 12:28:15 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/02 14:52:48 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ins_sort(int array[], int n)
 {
-	int element;
-	int i;
-	int j;
+	int	element;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (i < n)

@@ -11,6 +11,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 | [ft_isprint]                 | Comprueba si el carácter es imprimible         |
 | [ft_isspace]                 | Comprueba si el carácter es un espacio         |
 | [ft_isndup]                  | Comprueba si un array de numeros tiene numeros duplicados|
+| [ft_isstrnum]                | Comprueba si un array es numerico				|
 
 | Funciones de Memoria (mem)   | Descripción                                    |
 | ---------------------------- | ---------------------------------------------- |
@@ -119,6 +120,7 @@ Esta librería contiene varias funciones útiles para la manipulación de memori
 [ft_isprint]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isprint.c
 [ft_isspace]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isspace.c
 [ft_isndup]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isndup.c
+[ft_isstrnum]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isstrnum.c
 
 [ft_bzero]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_bzero.c
 [ft_calloc]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_calloc.c

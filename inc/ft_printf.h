@@ -6,23 +6,23 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:06:26 by danpalac          #+#    #+#             */
-/*   Updated: 2024/06/12 10:15:08 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/02 14:53:51 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include "libft.h"
+# include <limits.h>
 # include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
 # include <stddef.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
-# include <limits.h>
-# include "libft.h"
+# include <unistd.h>
 
-int   ft_nbrlen(long n);
+int		ft_nbrlen(long n);
 int		ft_putnbr(int n);
 int		ft_putchar(int c);
 int		ft_printf(const char *str, ...);
