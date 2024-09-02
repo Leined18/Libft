@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_successful.c                                    :+:      :+:    :+:   */
+/*   ft_isstrnum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 12:29:08 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/02 13:45:36 by danpalac         ###   ########.fr       */
+/*   Created: 2024/09/02 13:28:41 by danpalac          #+#    #+#             */
+/*   Updated: 2024/09/02 13:30:15 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_successful(char *msg, t_bool yeet)
+/**
+ * @brief check if the string is numeric
+ * @param str string to be checked if is numeric
+ */
+int	ft_isstrnum(char *str)
 {
-	if (msg && *msg)
+	int i;
+
+	i = 0;
+	if (str[i] == '-')
+		i++;
+	while (str[i])
 	{
-		ft_putstr_color_fd("\x1b[32m", msg, 1);
-		write(1, "\n", 1);
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
 	}
-	if (yeet)
-		exit(EXIT_SUCCESS);
+	return (1);
 }

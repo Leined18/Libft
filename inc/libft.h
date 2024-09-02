@@ -5,8 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2024/01/18 11:43:02 by danpalac          #+#    #+#             */
 /*   Updated: 2024/09/02 14:53:40 by danpalac         ###   ########.fr       */
+=======
+/*   Created: 2024/09/02 14:35:02 by danpalac          #+#    #+#             */
+/*   Updated: 2024/09/02 14:35:21 by danpalac         ###   ########.fr       */
+>>>>>>> 5fe2d10c6f50bcf41fe3232fed787a711213d628
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +63,7 @@ int						ft_isdigit(int c);
 int						ft_isprint(int c);
 int						ft_isspace(int c);
 t_bool					ft_isndup(int *num, int size);
+int						ft_isstrnum(char *str);
 
 /* ************************************************************************** */
 /*                                 MEMORY                                     */
@@ -96,7 +102,7 @@ void					ft_putendl_fd(char *s, int fd);
 void					ft_putnbr_fd(int n, int fd);
 void					ft_putstr_fd(char *s, int fd);
 void					ft_error(char *err, t_bool yeet);
-void					ft_successful(char *success);
+void					ft_successful(char *msg, t_bool yeet);
 
 /* ************************************************************************** */
 /*                                  TO										*/
