@@ -178,6 +178,14 @@ This library contains various useful functions for memory manipulation, strings,
 [ft_putaddr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putaddr.c
 [ft_putchar]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putchar.c
 [ft_puthexa]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_puthexa.c
+
+
+[ft_fact]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_fact.c
+[ft_fib]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_fib.c
+[ft_abs]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_abs.c
+[ft_index]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_index.c
+[ft_insort]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_insort.c
+[ft_sqrt]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_sqrt.c
 [ft_putnbr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putnbr.c
 [ft_putstr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putstr.c
 [ft_putunsigned]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putunsigned.c
