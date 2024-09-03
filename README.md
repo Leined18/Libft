@@ -174,11 +174,14 @@ This library contains various useful functions for memory manipulation, strings,
 [ft_putstr_color_fd]: https://github.com/Leined18/Libft/blob/main/srcs/put/ft_putstr_color_fd.c
 
 [ft_printf]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_printf.c
-[ft_putbase_fd]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putbase_fd.c
-[ft_putaddr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putaddr.c
-[ft_putchar]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putchar.c
-[ft_puthexa]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_puthexa.c
-
+[ft_putbase_fd]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putbase_fd.c
+[ft_putaddr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putaddr.c
+[ft_putchar]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putchar.c
+[ft_puthexa]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_puthexa.c
+[ft_putnbr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putnbr.c
+[ft_putstr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putstr.c
+[ft_putunsigned]: https://github.com/Leined18/Libft/blob/main/srcs/printf/put/ft_putunsigned.c
+[get_next_line]: https://github.com/Leined18/Libft/blob/main/srcs/get/get_next_line.c
 
 [ft_fact]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_fact.c
 [ft_fib]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_fib.c
@@ -186,7 +189,3 @@ This library contains various useful functions for memory manipulation, strings,
 [ft_index]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_index.c
 [ft_insort]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_insort.c
 [ft_sqrt]: https://github.com/Leined18/Libft/blob/main/srcs/math/ft_sqrt.c
-[ft_putnbr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putnbr.c
-[ft_putstr]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putstr.c
-[ft_putunsigned]: https://github.com/Leined18/Libft/blob/main/srcs/printf/ft_putunsigned.c
-[get_next_line]: https://github.com/Leined18/Libft/blob/main/srcs/get_next_line/get_next_line.c
