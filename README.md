@@ -79,8 +79,8 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_putendl_fd]               | Writes a line to a file descriptor                 |
 | [ft_putnbr_fd]                | Writes a number to a file descriptor               |
 | [ft_putstr_fd]                | Writes a string to a file descriptor               |
-| [ft_error]                    | Displays an error message                          |
-| [ft_successful]               | Displays a success message                         |
+| [ft_error]                    | Displays an error message with exit_failure        |
+| [ft_successful]               | Displays a success message with exit_success       |
 | [ft_putstr_color_fd]          | Writes a colored string to a file descriptor       |
 
 | **Printing Functions (printf) / Get_next_line** | **Description**                              |
