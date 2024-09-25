@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chartobin.c                                     :+:      :+:    :+:   */
+/*   ft_char2bin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:08:54 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/11 20:52:16 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/09/25 09:51:23 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_char2bin(unsigned char c)
+char *ft_char2bin(unsigned char c)
 {
-	char	*ret;
-	int		k;
-
-	ret = malloc(9);
-	if (!ret)
-		return (NULL);
-	k = 7;
-	while (k >= 0)
-	{
-		if (c & (1 << k))
-			ret[7 - k] = '1';
-		else
-			ret[7 - k] = '0';
-		k--;
-	}
-	ret[8] = '\0';
-	return (ret);
+    char *ret;
+	
+	ret = (char *)malloc(9 * sizeof(char));
+    if (!ret)
+        return NULL;
+    ret[0] = ((c & 0b10000000) >> 7) + '0';
+    ret[1] = ((c & 0b01000000) >> 6) + '0';
+    ret[2] = ((c & 0b00100000) >> 5) + '0';
+    ret[3] = ((c & 0b00010000) >> 4) + '0';
+    ret[4] = ((c & 0b00001000) >> 3) + '0';
+    ret[5] = ((c & 0b00000100) >> 2) + '0';
+    ret[6] = ((c & 0b00000010) >> 1) + '0';
+    ret[7] = ((c & 0b00000001) >> 0) + '0';
+    ret[8] = '\0';
+    return (ret);
 }
+
