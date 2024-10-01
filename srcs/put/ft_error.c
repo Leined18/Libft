@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 12:27:04 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/02 14:02:02 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:29:59 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_error(char *err, t_bool yeet)
 {
 	if (err && *err)
-		ft_putstr_color_fd("\033[1;31m", err, 2);
+		ft_putstr_fd(err, 2);
 	if (yeet)
 		exit(EXIT_FAILURE);
 }
