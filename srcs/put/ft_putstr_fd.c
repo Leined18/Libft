@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:02:49 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/05 22:19:32 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/07 16:09:49 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		ft_putchar_fd(s[i++], fd);
+	if (!s)
+		return ;
+	while (*s)
+		ft_putchar_fd(*s++, fd);
 }
 /*
 int	main(void) {
