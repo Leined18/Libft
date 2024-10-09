@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 12:27:04 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/01 12:29:59 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:29:01 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_error(char *err, t_bool yeet)
 {
 	if (err && *err)
-		ft_putstr_fd(err, 2);
+		ft_putstr_color_fd(RED, err, 2);
 	if (yeet)
 		exit(EXIT_FAILURE);
 }

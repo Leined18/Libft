@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isstrnum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:28:41 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/02 14:58:26 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:27:04 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ int	ft_isstrnum(char *str)
 			return (0);
 		i++;
 	}
+	if (i == 0)
+		return (0);
 	return (1);
 }
