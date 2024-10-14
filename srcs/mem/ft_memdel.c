@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:36:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/13 17:36:47 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/14 13:00:31 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_memdel(int num_args, ...)
 	while (num_args > 0)
 	{
 		ptr = va_arg(ap, void **);
-		if (ptr != NULL && *ptr != NULL)
+		if (ptr && *ptr)
 		{
 			free(*ptr);
 			*ptr = NULL;

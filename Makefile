@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/10/07 15:42:53 by danpalac         ###   ########.fr        #
+#    Updated: 2024/10/14 12:56:18 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ NAME		:= libft.a
 #==========COMMANDS============================================================#
 
 CC			:= gcc
-CFLAGS		:= -Wall -Wextra -Werror -g3
+CFLAGS		:= -Wall -Wextra -Werror -g3 -fsanitize=address
 RM			:= rm -rf
 AR			:= ar rcs
 LIB			:= ranlib
@@ -141,6 +141,9 @@ $(NAME) : $(OBJS)
 	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)"
 	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
 
+p:
+	$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program && ./program
+
 clean: 
 	@$(RM) -rf $(OBJ_DIR) a.out
 
@@ -150,7 +153,7 @@ fclean: clean
 re: fclean all
 
 norm:
-	@norminette $(SRC) $(INCLUDE) | grep -v Norme -B1 || true
+	@norminette $(SRC) $(INCLUDES) | grep -v Norme -B1 || true
 
 -include $(DEPS)
 
