@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_execmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:54:18 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 13:40:43 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/15 22:54:21 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@
 
 void	execute_command(t_command *cmd)
 {
-	if (execvp(cmd->command, cmd->args) < 0)
+	if (execve(cmd->cmd_path, cmd->args, NULL) < 0)
 	{
-		ft_error("Error al ejecutar el comando\n", 1);
+		if (execve(cmd->command, cmd->args, NULL) < 0)
+		{
+			ft_memdel(4, cmd->args, cmd->command, cmd->cmd_path, cmd);
+			ft_error("Error al ejecutar el comando\n", 1);
+		}
 	}
 }

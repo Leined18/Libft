@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 12:58:12 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/15 22:50:03 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ typedef struct s_list
 typedef struct s_command
 {
 	char				*command;
+	char				*cmd_path;
 	char				**args;
 }						t_command;
 

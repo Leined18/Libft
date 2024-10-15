@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/10/15 13:42:13 by danpalac         ###   ########.fr        #
+#    Updated: 2024/10/15 20:39:16 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -146,7 +146,7 @@ $(NAME) : $(OBJS)
 	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
 
 p:
-	@$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program && ./program
+	@$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program
 
 clean: 
 	@$(RM) -rf $(OBJ_DIR) 

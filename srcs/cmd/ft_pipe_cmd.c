@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pipe_cmd.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:55:01 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 12:56:44 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/15 22:43:58 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	pipe_commands(t_command *cmd1, t_command *cmd2)
 	pid_t	pid1;
 	pid_t	pid2;
 
+	if (!cmd1 || !cmd2)
+		return ;
 	if (pipe(pipefd) == -1)
 		ft_error("Error al crear el pipe", 1);
 	pid1 = fork();
