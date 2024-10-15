@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 16:36:36 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/13 17:40:41 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/15 12:58:00 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@
 #  define BUFFER_SIZE 42
 # endif
 
-char		*get_next_line(int fd);
+char	*get_next_line(int fd);
 
 #endif

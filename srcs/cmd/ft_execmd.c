@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_execmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/13 17:36:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 13:07:05 by danpalac         ###   ########.fr       */
+/*   Created: 2024/10/15 12:54:18 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/15 13:40:43 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(int num_args, ...)
-{
-	va_list	ap;
-	void	**ptr;
+// This funtion is temporal, we must to use exeve instead of execvp
 
-	va_start(ap, num_args);
-	while (num_args > 0)
+void	execute_command(t_command *cmd)
+{
+	if (execvp(cmd->command, cmd->args) < 0)
 	{
-		ptr = va_arg(ap, void *);
-		if (ptr)
-		{
-			free(ptr);
-			ptr = NULL;
-		}
-		num_args--;
+		ft_error("Error al ejecutar el comando\n", 1);
 	}
-	va_end(ap);
 }

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_create_child.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/13 17:36:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 13:07:05 by danpalac         ###   ########.fr       */
+/*   Created: 2024/10/15 12:54:54 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/15 12:54:55 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(int num_args, ...)
+void	create_child(t_command *cmd, int *pipefd, int child_num)
 {
-	va_list	ap;
-	void	**ptr;
-
-	va_start(ap, num_args);
-	while (num_args > 0)
+	if (child_num == 1)
 	{
-		ptr = va_arg(ap, void *);
-		if (ptr)
-		{
-			free(ptr);
-			ptr = NULL;
-		}
-		num_args--;
+		close(pipefd[0]);
+		redirect_output(pipefd[1]);
 	}
-	va_end(ap);
+	else if (child_num == 2)
+	{
+		close(pipefd[1]);
+		redirect_input(pipefd[0]);
+	}
+	execute_command(cmd);
 }

@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/14 12:41:24 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/15 12:58:12 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,25 @@ typedef struct s_list
 	void				*content;
 	struct s_list		*next;
 }						t_list;
+
+typedef struct s_command
+{
+	char				*command;
+	char				**args;
+}						t_command;
+
+/* ************************************************************************** */
+/*                                 COMMANDS                                   */
+/* ************************************************************************** */
+
+t_command				*create_command(char *cmd, char *arg);
+void					execute_command(t_command *cmd);
+void					redirect_output(int fd);
+void					redirect_input(int fd);
+void					create_child(t_command *cmd, int *pipefd,
+							int child_num);
+void					pipe_commands(t_command *cmd1, t_command *cmd2);
+void					handle_parent(int *pipefd, pid_t pid1, pid_t pid2);
 
 /* ************************************************************************** */
 /*                                  CHECK                                     */

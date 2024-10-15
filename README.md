@@ -104,6 +104,24 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_fact]                     | Calculates the factorial of a number               |
 | [ft_fib]                      | Calculates the nth number in the Fibonacci sequence |
 
+| **CMD Funtions (cmd)**     | **Description**                                       |
+| ----------------------------- | -------------------------------------------------- |
+| [create_command]              | Create a command structure with the arguments passed|
+| [redirect_output]             | Redirect the standar output to the fd passed as argument      |
+| [redirect_input]              | Redirect the standar input to the fd passed as argument       |
+| [create_child]                | Create a child process                             |
+| [handle_parent]               | handle the parent process                          |
+| [pipe_commands]               | Pipe two commands as passed argument               |
+| [execute_command]             | execute a command                                  |
+
+[create_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_create_cmd.c
+[execute_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_execmd.c
+[redirect_output]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_redirect_output.c
+[redirect_input]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_redirect_input.c
+[create_child]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_create_child.c
+[handle_parent]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_handle_parent.c
+[pipe_commands]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_pipe_cmd.c
+
 [ft_isalpha]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalpha.c
 [ft_isalnum]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalnum.c
 [ft_isascii]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isascii.c

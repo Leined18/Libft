@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/10/14 12:56:18 by danpalac         ###   ########.fr        #
+#    Updated: 2024/10/15 13:42:13 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ PRINTF_DIR := printf/
 PRINTF_PUT_DIR := printf/put/
 MATH_DIR := math/
 GET_DIR := get/
+CMD_DIR := cmd/
 
 
 #==========SOURCES============================================================#
@@ -109,6 +110,8 @@ MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib ft_fact
 
 GET_FILES := get_next_line
 
+CMD_FILES := ft_create_child ft_create_cmd ft_execmd ft_handle_parent ft_pipe_cmd ft_redirect_input ft_redirect_output
+
 #==========FILES###===========================================================#
 
 SRC_FILES+=$(addprefix $(IS_DIR), $(IS_FILES))
@@ -121,6 +124,7 @@ SRC_FILES+=$(addprefix $(PRINTF_DIR), $(PRINTF_FILES))
 SRC_FILES+=$(addprefix $(PRINTF_PUT_DIR), $(PRINTF_PUT_FILES))
 SRC_FILES+=$(addprefix $(MATH_DIR), $(MATH_FILES))
 SRC_FILES+=$(addprefix $(GET_DIR), $(GET_FILES))
+SRC_FILES+=$(addprefix $(CMD_DIR), $(CMD_FILES))
 
 SRCS := $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS := $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -142,13 +146,13 @@ $(NAME) : $(OBJS)
 	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
 
 p:
-	$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program && ./program
+	@$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program && ./program
 
 clean: 
-	@$(RM) -rf $(OBJ_DIR) a.out
+	@$(RM) -rf $(OBJ_DIR) 
 
 fclean: clean
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) program a.out
 
 re: fclean all
 
