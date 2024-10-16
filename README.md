@@ -2,6 +2,8 @@
 
 This library contains various useful functions for memory manipulation, strings, lists, printing, and more. The functions are detailed below, grouped by categories:
 
+# Funtions
+
 | **Character Functions (is)** | **Description**                                    |
 | ---------------------------- | -------------------------------------------------- |
 | [ft_isalpha]                 | Checks if the character is alphabetic              |
@@ -26,7 +28,7 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_memccpy]                 | Copies up to a specific character                  |
 | [ft_memdel]                  | Frees a memory block                               |
 | [ft_free_2d]                 | Frees a two-dimensional array                      |
-| [ft_free_null]               | Frees a a memory block and set it to null          |
+| [ft_free_null]               | Frees a memory block and sets it to null          |
 
 | **Conversion Functions (to)** | **Description**                                    |
 | ----------------------------- | -------------------------------------------------- |
@@ -105,15 +107,17 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_fact]                     | Calculates the factorial of a number               |
 | [ft_fib]                      | Calculates the nth number in the Fibonacci sequence |
 
-| **CMD Funtions (cmd)**     | **Description**                                       |
+| **CMD Functions (cmd)**     | **Description**                                       |
 | ----------------------------- | -------------------------------------------------- |
-| [create_command]              | Create a command structure with the arguments passed|
-| [redirect_output]             | Redirect the standar output to the fd passed as argument      |
-| [redirect_input]              | Redirect the standar input to the fd passed as argument       |
-| [create_child]                | Create a child process                             |
-| [handle_parent]               | handle the parent process                          |
-| [pipe_commands]               | Pipe two commands as passed argument               |
-| [execute_command]             | execute a command                                  |
+| [create_command]              | Creates a command structure with the arguments passed|
+| [redirect_output]             | Redirects the standard output to the file descriptor passed as argument      |
+| [redirect_input]              | Redirects the standard input to the file descriptor passed as argument       |
+| [create_child]                | Creates a child process                             |
+| [handle_parent]               | Handles the parent process                          |
+| [pipe_commands]               | Pipes two commands as passed as arguments          |
+| [execute_command]             | Executes a command                                  |
+| [get_cmd_path]             	| Gets the command path		                         |
+| [parse_command]             	| Parses a command and returns a `t_command` struct   |
 
 [create_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_create_cmd.c
 [execute_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_execmd.c
@@ -122,6 +126,8 @@ This library contains various useful functions for memory manipulation, strings,
 [create_child]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_create_child.c
 [handle_parent]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_handle_parent.c
 [pipe_commands]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_pipe_cmd.c
+[get_cmd_path]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_get_cmd_path.c
+[parse_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_parse_cmd.c
 
 [ft_isalpha]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalpha.c
 [ft_isalnum]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalnum.c

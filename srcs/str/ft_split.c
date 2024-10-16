@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 09:47:33 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/26 12:16:41 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:02:33 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 	size_t	words;
 
-	if (!s)
+	if (!s || !*s)
 		return (NULL);
 	words = count_words(s, c);
 	array = (char **)malloc(sizeof(char *) * (words + 1));

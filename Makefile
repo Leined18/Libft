@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/10/16 09:20:15 by danpalac         ###   ########.fr        #
+#    Updated: 2024/10/16 11:11:53 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,8 @@ MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib ft_fact
 
 GET_FILES := get_next_line
 
-CMD_FILES := ft_create_child ft_create_cmd ft_execmd ft_handle_parent ft_pipe_cmd ft_redirect_input ft_redirect_output
+CMD_FILES := ft_create_child ft_create_cmd ft_execmd ft_handle_parent ft_pipe_cmd ft_redirect_input ft_redirect_output\
+			ft_get_cmd_path ft_parse_cmd
 
 #==========FILES###===========================================================#
 
