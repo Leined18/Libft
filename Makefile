@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/10/15 20:39:16 by danpalac         ###   ########.fr        #
+#    Updated: 2024/10/16 09:20:15 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,7 @@ CMD_DIR := cmd/
 IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace ft_isndup ft_isstrnum
 
 MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset\
-			   ft_memrev ft_memccpy ft_memdel ft_free_2d
+			   ft_memrev ft_memccpy ft_memdel ft_free_2d ft_free_null
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful ft_putstr_color_fd
 
@@ -145,7 +145,7 @@ $(NAME) : $(OBJS)
 	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)"
 	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
 
-p:
+p: $(NAME)
 	@$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program
 
 clean: 

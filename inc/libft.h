@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 22:50:03 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:51:10 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@
 /* ************************************************************************** */
 /*                                 STRUCTS                                    */
 /* ************************************************************************** */
+
+typedef void			(*t_del_func)(void *);
 
 typedef struct s_hash_entry
 {
@@ -110,11 +112,11 @@ void					*ft_memcpy(void *dest, void const *src, size_t n);
 void					*ft_memmove(void *dest, const void *src, size_t n);
 void					*ft_memset(void *str, int c, size_t n);
 void					ft_memrev(void *ptr, size_t size);
-void					ft_memdel(int arg, ...);
+void					ft_memdel(size_t ac, t_del_func del_func, ...);
 void					*ft_memccpy(void *dst, const void *src, int c,
 							size_t n);
-void					free_2d(char **array);
-
+void					free_2d(void *array);
+void					free_null(void *ptr);
 /* ************************************************************************** */
 /*                                  MATHS									*/
 /* ************************************************************************** */

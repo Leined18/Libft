@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:58:41 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 23:01:00 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/16 10:21:07 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ char	*join_path(const char *dir, const char *cmd)
 	if (!tmp)
 		return (NULL);
 	full_path = ft_strjoin(tmp, cmd);
-	free(tmp);
+	if (!full_path)
+		return (free_null(tmp), NULL);
+	free_null(tmp);
 	return (full_path);
 }
 
@@ -52,23 +54,24 @@ char	*get_cmd_path(char *cmd, char **envp)
 	if (!path_env)
 		return (NULL);
 	paths = ft_split(path_env, ':');
+	if (!paths)
+		return (NULL);
 	i = 0;
 	while (paths[i])
 	{
 		full_path = join_path(paths[i], cmd);
+		if (!full_path)
+			return (free_2d(paths), NULL);
 		if (access(full_path, X_OK) == 0)
-		{
-			free_2d(paths);
-			return (full_path);
-		}
-		free(full_path);
+			return (free_2d(paths), full_path);
+		free_null(full_path);
 		i++;
 	}
 	free_2d(paths);
 	return (NULL);
 }
 
-t_command	*parse_command(char *input)
+t_command	*parse_command(char *input, char **environ)
 {
 	t_command	*cmd;
 	char		**args;
@@ -78,10 +81,14 @@ t_command	*parse_command(char *input)
 		return (NULL);
 	cmd = malloc(sizeof(t_command));
 	if (!cmd)
-	{
-		free_2d(args);
-		return (NULL);
-	}
+		return (free_2d(args), NULL);
+	cmd->cmd_path = NULL;
+	if (environ)
+		cmd->cmd_path = get_cmd_path(args[0], environ);
+	if ((access(args[0], X_OK) && !cmd->cmd_path) || access(cmd->cmd_path,
+			X_OK))
+		return (free_2d(args), ft_memdel(2, free_null, cmd, cmd->cmd_path),
+			NULL);
 	cmd->command = args[0];
 	cmd->args = args;
 	return (cmd);
@@ -89,23 +96,32 @@ t_command	*parse_command(char *input)
 
 int	main(int argc, char **argv, char **envp)
 {
-	t_command	*cmd;
+	t_command	*cmd[2];
 
 	if (argc >= 2)
 	{
-		cmd = parse_command(argv[1]);
-		if (!cmd)
+		cmd[0] = parse_command(argv[1], envp);
+		if (!cmd[0])
 			return (1);
-		cmd->cmd_path = get_cmd_path(cmd->command, envp);
-		if (!cmd->cmd_path)
+		if (argc >= 3)
 		{
-			free_2d(cmd->args);
-			free(cmd);
-			return (1);
+			cmd[1] = parse_command(argv[2], envp);
+			if (!cmd[1])
+				ft_error("", 1);
+			pipe_commands(cmd[0], cmd[1]);
 		}
-		execute_command(cmd);
-		free(cmd->args);
-		free(cmd);
+		else
+			execute_command(cmd[0]);
+	}
+	if (cmd[0])
+	{
+		ft_memdel(2, free_2d, cmd[0]->args, NULL);
+		ft_memdel(2, free_null, cmd[0], cmd[0]->cmd_path, NULL);
+	}
+	if (cmd[1])
+	{
+		ft_memdel(2, free_2d, cmd[1]->args, NULL);
+		ft_memdel(2, free_null, cmd[1], cmd[1]->cmd_path, NULL);
 	}
 	return (0);
 }
