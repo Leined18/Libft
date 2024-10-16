@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bintostr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:41:56 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/11 20:54:42 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:55:48 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_bintostr(const char *bin)
+char	*ft_bintoa(const char *bin)
 {
 	size_t	bin_len;
 	size_t	i;

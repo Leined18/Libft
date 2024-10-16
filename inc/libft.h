@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 11:10:41 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:57:13 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,8 +103,8 @@ void		ft_successful(char *msg, t_bool yeet);
 /*                                  TO										*/
 /* ************************************************************************** */
 
-char		*ft_bintostr(const char *bin);
-char		*ft_strtobin(const char *str);
+char		*ft_bintoa(const char *bin);
+char		*ft_atobin(const char *str);
 char		ft_bin2char(const char *bin);
 char		*ft_char2bin(unsigned char c);
 int			ft_atoi(char const *str);

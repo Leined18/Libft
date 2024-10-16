@@ -40,8 +40,8 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_tolower]                  | Converts a character to lowercase                  |
 | [ft_toupper]                  | Converts a character to uppercase                  |
 | [ft_bintoa]                   | Converts binary to a string                        |
-| [ft_bintostr]                 | Converts binary to a readable string               |
-| [ft_strtobin]                 | Converts a string to binary                        |
+| [ft_bin2char]                 | Converts binary to a char			                 |
+| [ft_char2bin]                 | Converts a char to binary                          |
 
 | **String Functions (str)**    | **Description**                                    |
 | ----------------------------- | -------------------------------------------------- |
@@ -159,8 +159,8 @@ This library contains various useful functions for memory manipulation, strings,
 [ft_tolower]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_tolower.c
 [ft_toupper]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_toupper.c
 [ft_bintoa]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_bintoa.c
-[ft_bintostr]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_bintostr.c
-[ft_strtobin]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_strtobin.c
+[ft_bin2char]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_bin2char.c
+[ft_char2bin]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_char2bin.c
 
 [ft_split]: https://github.com/Leined18/Libft/blob/main/srcs/str/ft_split.c
 [ft_strchr]: https://github.com/Leined18/Libft/blob/main/srcs/str/ft_strchr.c
