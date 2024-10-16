@@ -26,6 +26,7 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_memccpy]                 | Copies up to a specific character                  |
 | [ft_memdel]                  | Frees a memory block                               |
 | [ft_free_2d]                 | Frees a two-dimensional array                      |
+| [ft_free_null]               | Frees a a memory block and set it to null          |
 
 | **Conversion Functions (to)** | **Description**                                    |
 | ----------------------------- | -------------------------------------------------- |
@@ -142,6 +143,7 @@ This library contains various useful functions for memory manipulation, strings,
 [ft_memccpy]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memccpy.c
 [ft_memdel]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_memdel.c
 [ft_free_2d]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_free_2d.c
+[ft_free_2d]: https://github.com/Leined18/Libft/blob/main/srcs/mem/ft_free_null.c
 
 [ft_atoi]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_atoi.c
 [ft_atobin]: https://github.com/Leined18/Libft/blob/main/srcs/to/ft_atobin.c
