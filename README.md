@@ -2,10 +2,23 @@
 
 This library contains various useful functions for memory manipulation, strings, lists, printing, and more. The functions are detailed below, grouped by categories:
 
-# Funtions
+# Function Types
 
-| **Character Functions (is)** | **Description**                                    |
-| ---------------------------- | -------------------------------------------------- |
+- [Character Functions (is)](#character-functions-is)
+- [Memory Functions (mem)](#memory-functions-mem)
+- [Conversion Functions (to)](#conversion-functions-to)
+- [String Functions (str)](#string-functions-str)
+- [List Functions (lst)](#list-functions-lst)
+- [Output Functions (put)](#output-functions-put)
+- [Printing Functions (printf) / Get_next_line](#printing-functions-printf--get_next_line)
+- [Math Functions (math)](#math-functions-math)
+- [CMD Functions (cmd)](#cmd-functions-cmd)
+
+# Functions
+
+## Character Functions (is)
+| **Description**                                    |
+| -------------------------------------------------- |
 | [ft_isalpha]                 | Checks if the character is alphabetic              |
 | [ft_isalnum]                 | Checks if the character is alphanumeric            |
 | [ft_isascii]                 | Checks if the character belongs to ASCII           |
@@ -15,8 +28,9 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_isndup]                  | Checks if a number array has duplicates            |
 | [ft_isstrnum]                | Checks if a string is numeric                      |
 
-| **Memory Functions (mem)**   | **Description**                                    |
-| ---------------------------- | -------------------------------------------------- |
+## Memory Functions (mem)
+| **Description**                                    |
+| -------------------------------------------------- |
 | [ft_bzero]                   | Sets a block of memory to zero                     |
 | [ft_calloc]                  | Allocates memory and initializes it to zero        |
 | [ft_memchr]                  | Searches for a character in a memory block         |
@@ -30,8 +44,9 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_free_2d]                 | Frees a two-dimensional array                      |
 | [ft_free_null]               | Frees a memory block and sets it to null          |
 
-| **Conversion Functions (to)** | **Description**                                    |
-| ----------------------------- | -------------------------------------------------- |
+## Conversion Functions (to)
+| **Description**                                    |
+| -------------------------------------------------- |
 | [ft_atoi]                     | Converts a string to an integer                    |
 | [ft_atobin]                   | Converts a string to binary                        |
 | [ft_atol]                     | Converts a string to long                          |
@@ -40,11 +55,12 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_tolower]                  | Converts a character to lowercase                  |
 | [ft_toupper]                  | Converts a character to uppercase                  |
 | [ft_bintoa]                   | Converts binary to a string                        |
-| [ft_bin2char]                 | Converts binary to a char			                 |
+| [ft_bin2char]                 | Converts binary to a char                          |
 | [ft_char2bin]                 | Converts a char to binary                          |
 
-| **String Functions (str)**    | **Description**                                    |
-| ----------------------------- | -------------------------------------------------- |
+## String Functions (str)
+| **Description**                                    |
+| -------------------------------------------------- |
 | [ft_split]                    | Splits a string into an array of strings           |
 | [ft_strchr]                   | Searches for a character in a string               |
 | [ft_strdup]                   | Duplicates a string                                |
@@ -64,8 +80,9 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_strtok]                   | Splits a string into tokens                        |
 | [ft_straddc]                  | Appends a character to the end of a string         |
 
-| **List Functions (lst)**      | **Description**                                    |
-| ----------------------------- | -------------------------------------------------- |
+## List Functions (lst)
+| **Description**                                    |
+| -------------------------------------------------- |
 | [ft_lstnew_bonus]             | Creates a new list node                            |
 | [ft_lstadd_front_bonus]       | Adds a node to the front of the list               |
 | [ft_lstsize_bonus]            | Calculates the size of a list                      |
@@ -76,8 +93,9 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_lstiter_bonus]            | Iterates over a list                               |
 | [ft_lstmap_bonus]             | Applies a function to each element of the list     |
 
-| **Output Functions (put)**    | **Description**                                    |
-| ----------------------------- | -------------------------------------------------- |
+## Output Functions (put)
+| **Description**                                    |
+| -------------------------------------------------- |
 | [ft_putchar_fd]               | Writes a character to a file descriptor            |
 | [ft_putendl_fd]               | Writes a line to a file descriptor                 |
 | [ft_putnbr_fd]                | Writes a number to a file descriptor               |
@@ -86,20 +104,22 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_successful]               | Displays a success message with exit_success       |
 | [ft_putstr_color_fd]          | Writes a colored string to a file descriptor       |
 
-| **Printing Functions (printf) / Get_next_line** | **Description**                              |
-| ------------------------------------------------ | -------------------------------------------- |
-| [ft_printf]                                      | Prints a formatted message                   |
-| [ft_putbase_fd]                                  | Prints a number in a specific base           |
-| [ft_putaddr]                                     | Prints a memory address                      |
-| [ft_putchar]                                     | Prints a character                           |
-| [ft_puthexa]                                     | Prints a number in hexadecimal               |
-| [ft_putnbr]                                      | Prints a number                              |
-| [ft_putstr]                                      | Prints a string                              |
-| [ft_putunsigned]                                 | Prints an unsigned number                    |
-| [get_next_line]                                  | Reads a line from a file descriptor          |
+## Printing Functions (printf) / Get_next_line
+| **Description**                              |
+| -------------------------------------------- |
+| [ft_printf]                                  | Prints a formatted message                   |
+| [ft_putbase_fd]                              | Prints a number in a specific base           |
+| [ft_putaddr]                                 | Prints a memory address                      |
+| [ft_putchar]                                 | Prints a character                           |
+| [ft_puthexa]                                 | Prints a number in hexadecimal               |
+| [ft_putnbr]                                  | Prints a number                              |
+| [ft_putstr]                                  | Prints a string                              |
+| [ft_putunsigned]                             | Prints an unsigned number                    |
+| [get_next_line]                              | Reads a line from a file descriptor          |
 
-| **Math Functions (math)**     | **Description**                                    |
-| ----------------------------- | -------------------------------------------------- |
+## Math Functions (math)
+| **Description**                                    |
+| -------------------------------------------------- |
 | [ft_abs]                      | Calculates the absolute value of a number          |
 | [ft_index]                    | Finds the position of a value in an array          |
 | [ft_insort]                   | Sorts an array using insertion sort                |
@@ -107,8 +127,9 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_fact]                     | Calculates the factorial of a number               |
 | [ft_fib]                      | Calculates the nth number in the Fibonacci sequence |
 
-| **CMD Functions (cmd)**     | **Description**                                       |
-| ----------------------------- | -------------------------------------------------- |
+## CMD Functions (cmd)
+| **Description**                                       |
+| -------------------------------------------------- |
 | [create_command]              | Creates a command structure with the arguments passed|
 | [redirect_output]             | Redirects the standard output to the file descriptor passed as argument      |
 | [redirect_input]              | Redirects the standard input to the file descriptor passed as argument       |
