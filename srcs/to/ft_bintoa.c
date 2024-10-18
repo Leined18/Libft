@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bintostr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 19:42:19 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 10:08:34 by danpalac         ###   ########.fr       */
+/*   Created: 2024/07/09 11:41:56 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/16 11:55:48 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_bintoa(const char *bin)
 {
+	size_t	bin_len;
 	size_t	i;
+	size_t	j;
+	char	*str;
 
+	if (!bin)
+		return (NULL);
+	bin_len = ft_strlen(bin);
+	if (bin_len % 8 != 0)
+		return (NULL);
+	str = (char *)malloc((bin_len / 8) + 1);
+	if (!str)
+		return (NULL);
 	i = 0;
-	if (!s)
-		return (i);
-	if (!s[i])
-		return (i);
-	while (s[i] != '\0')
+	j = 0;
+	while (j < bin_len)
+	{
+		str[i] = ft_bin2char(bin + j);
 		i++;
-	return (i);
+		j += 8;
+	}
+	str[i] = '\0';
+	return (str);
 }
-/*
-int	main(void)
-{
-	char str[] = "Hello, world";
-
-	printf("%zu", ft_strlen(NULL));
-	return (0);
-}*/

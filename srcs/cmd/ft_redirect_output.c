@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_redirect_output.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 19:42:19 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 10:08:34 by danpalac         ###   ########.fr       */
+/*   Created: 2024/10/15 12:54:50 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/16 09:46:43 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	redirect_output(int fd)
 {
-	size_t	i;
-
-	i = 0;
-	if (!s)
-		return (i);
-	if (!s[i])
-		return (i);
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	if (dup2(fd, STDOUT_FILENO) == -1)
+		ft_error("Error redirigiendo la salida estándar", 0);
+	close(fd);
 }
-/*
-int	main(void)
-{
-	char str[] = "Hello, world";
-
-	printf("%zu", ft_strlen(NULL));
-	return (0);
-}*/

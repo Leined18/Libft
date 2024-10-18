@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_execmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 19:42:19 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 10:08:34 by danpalac         ###   ########.fr       */
+/*   Created: 2024/10/15 12:54:18 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/16 09:56:43 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	execute_command(t_command *cmd)
 {
-	size_t	i;
+	int	result;
 
-	i = 0;
-	if (!s)
-		return (i);
-	if (!s[i])
-		return (i);
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	if (cmd->cmd_path)
+		result = execve(cmd->cmd_path, cmd->args, NULL);
+	if (result < 0)
+		result = execvp(cmd->command, cmd->args);
+	if (result < 0)
+	{
+		free_2d(cmd->args);
+		ft_memdel(3, free_null, cmd, cmd->cmd_path, NULL);
+		ft_error("Error al ejecutar el comando\n", 1);
+	}
 }
-/*
-int	main(void)
-{
-	char str[] = "Hello, world";
-
-	printf("%zu", ft_strlen(NULL));
-	return (0);
-}*/

@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bintostr.c                                      :+:      :+:    :+:   */
+/*   ft_create_child.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 11:41:56 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/11 20:54:42 by danpalac         ###   ########.fr       */
+/*   Created: 2024/10/15 12:54:54 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/15 12:54:55 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_bintostr(const char *bin)
+void	create_child(t_command *cmd, int *pipefd, int child_num)
 {
-	size_t	bin_len;
-	size_t	i;
-	size_t	j;
-	char	*str;
-
-	if (!bin)
-		return (NULL);
-	bin_len = ft_strlen(bin);
-	if (bin_len % 8 != 0)
-		return (NULL);
-	str = (char *)malloc((bin_len / 8) + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (j < bin_len)
+	if (child_num == 1)
 	{
-		str[i] = ft_bin2char(bin + j);
-		i++;
-		j += 8;
+		close(pipefd[0]);
+		redirect_output(pipefd[1]);
 	}
-	str[i] = '\0';
-	return (str);
+	else if (child_num == 2)
+	{
+		close(pipefd[1]);
+		redirect_input(pipefd[0]);
+	}
+	execute_command(cmd);
 }

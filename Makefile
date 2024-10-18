@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/09/02 14:34:29 by danpalac         ###   ########.fr        #
+#    Updated: 2024/10/16 11:56:47 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ NAME		:= libft.a
 #==========COMMANDS============================================================#
 
 CC			:= gcc
-CFLAGS		:= -Wall -Wextra -Werror -g3
+CFLAGS		:= -Wall -Wextra -Werror -g3 -fsanitize=address
 RM			:= rm -rf
 AR			:= ar rcs
 LIB			:= ranlib
@@ -81,6 +81,7 @@ PRINTF_DIR := printf/
 PRINTF_PUT_DIR := printf/put/
 MATH_DIR := math/
 GET_DIR := get/
+CMD_DIR := cmd/
 
 
 #==========SOURCES============================================================#
@@ -89,11 +90,11 @@ GET_DIR := get/
 IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace ft_isndup ft_isstrnum
 
 MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset\
-			   ft_memrev ft_memccpy ft_memdel ft_free_2d
+			   ft_memrev ft_memccpy ft_memdel ft_free_2d ft_free_null
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful ft_putstr_color_fd
 
-TO_FILES	:= ft_atoi ft_itoa ft_atol ft_atoll ft_tolower ft_toupper ft_bin2char ft_char2bin ft_bintostr ft_strtobin
+TO_FILES	:= ft_atoi ft_itoa ft_atol ft_atoll ft_tolower ft_toupper ft_bin2char ft_char2bin ft_bintoa ft_atobin
 
 STR_FILES	:= ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp \
 			ft_strnstr ft_strrchr ft_strtrim ft_strrev ft_substr ft_strrncmp ft_strtok ft_straddc
@@ -109,6 +110,9 @@ MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib ft_fact
 
 GET_FILES := get_next_line
 
+CMD_FILES := ft_create_child ft_create_cmd ft_execmd ft_handle_parent ft_pipe_cmd ft_redirect_input ft_redirect_output\
+			ft_get_cmd_path ft_parse_cmd
+
 #==========FILES###===========================================================#
 
 SRC_FILES+=$(addprefix $(IS_DIR), $(IS_FILES))
@@ -121,6 +125,7 @@ SRC_FILES+=$(addprefix $(PRINTF_DIR), $(PRINTF_FILES))
 SRC_FILES+=$(addprefix $(PRINTF_PUT_DIR), $(PRINTF_PUT_FILES))
 SRC_FILES+=$(addprefix $(MATH_DIR), $(MATH_FILES))
 SRC_FILES+=$(addprefix $(GET_DIR), $(GET_FILES))
+SRC_FILES+=$(addprefix $(CMD_DIR), $(CMD_FILES))
 
 SRCS := $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS := $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -141,18 +146,19 @@ $(NAME) : $(OBJS)
 	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)"
 	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
 
+p: $(NAME)
+	@$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program
+
 clean: 
-	@$(RM) -rf $(OBJ_DIR) a.out
-	@printf "%b" "$(BLUE)[LIBFT]:\tobject files$(DEF_COLOR)$(GREEN)  => Cleaned!$(DEF_COLOR)\n"
+	@$(RM) -rf $(OBJ_DIR) 
 
 fclean: clean
-	@$(RM) $(NAME)
-	@printf "%b" "$(CYAN)[LIBFT]:\texec. files$(DEF_COLOR)$(GREEN)  => Cleaned!$(DEF_COLOR)\n"
+	@$(RM) $(NAME) program a.out
 
 re: fclean all
 
 norm:
-	@norminette $(SRC) $(INCLUDE) | grep -v Norme -B1 || true
+	@norminette $(SRC) $(INCLUDES) | grep -v Norme -B1 || true
 
 -include $(DEPS)
 

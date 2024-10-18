@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:06:26 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/02 14:53:51 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/16 10:58:19 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,7 @@
 # define FT_PRINTF_H
 
 # include "libft.h"
-# include <limits.h>
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
+# include "shared.h"
 
 int		ft_nbrlen(long n);
 int		ft_putnbr(int n);

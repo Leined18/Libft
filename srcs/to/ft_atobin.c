@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtobin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:38:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/08/11 20:55:00 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/16 11:55:13 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	copy_bin(char *bin, char *char_bin, size_t *j)
 	free(char_bin);
 }
 
-char	*ft_strtobin(const char *str)
+char	*ft_atobin(const char *str)
 {
 	size_t	len;
 	char	*bin;
