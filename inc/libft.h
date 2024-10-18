@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 11:57:13 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/18 12:36:09 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,6 @@
 # include "get_next_line.h"
 # include "shared.h"
 # include "structs.h"
-
-/* ************************************************************************** */
-/*                                  COLORS                                    */
-/* ************************************************************************** */
-
-// Definiciones de colores ANSI como macros
-# define BLACK "\033[0;30m"
-# define RED "\033[0;31m"
-# define GREEN "\033[0;32m"
-# define YELLOW "\033[0;33m"
-# define BLUE "\033[0;34m"
-# define PURPLE "\033[0;35m"
-# define CYAN "\033[0;36m"
-# define WHITE "\033[0;37m"
-# define RESET "\033[0m"
 
 /* ************************************************************************** */
 /*                                 COMMANDS                                   */

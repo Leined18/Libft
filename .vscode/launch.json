@@ -6,7 +6,10 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/program",
-      "args": ["1", "wc -l"],
+      "args": [
+        "1",
+        "wc -l"
+      ],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
@@ -19,17 +22,33 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "build", // Debe coincidir con el nombre de tu tarea de compilación
+      "preLaunchTask": "build",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "miDebuggerArgs": "",
+      "logging": {
+        "trace": true,
+        "traceResponse": true,
+        "engineLogging": true
+      }
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/danpalac/sgoinfre/Libft",
+      "program": "/home/danpalac/sgoinfre/Libft/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ],
-      "miDebuggerPath": "/usr/bin/gdb", // Cambia esto si tienes gdb en otro path
-      "miDebuggerArgs": "",
-      "logging": { "trace": true, "traceResponse": true, "engineLogging": true }
+      ]
     }
   ]
 }
