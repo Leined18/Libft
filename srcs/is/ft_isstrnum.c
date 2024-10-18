@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:28:41 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/02 14:58:26 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/18 10:31:07 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,21 @@
 int	ft_isstrnum(char *str)
 {
 	int	i;
+	int	n;
 
 	i = 0;
+	n = FALSE;
+	while (str[i] == ' ')
+		i++;
 	if (str[i] == '-')
 		i++;
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]))
-			return (0);
+		if (ft_isdigit(str[i]))
+			n = 1;
+		else
+			n = 0;
 		i++;
 	}
-	return (1);
+	return (n);
 }
