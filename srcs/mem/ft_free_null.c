@@ -6,17 +6,17 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:17:27 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 09:43:21 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:57:54 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_null(void *ptr)
+void	free_null(void **ptr)
 {
-	if (ptr)
+	if (ptr && *ptr)
 	{
-		free(ptr);
-		ptr = NULL;
+		free(*ptr);
+		*ptr = NULL;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 11:07:44 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 11:07:55 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:55:07 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ static char	*join_path(const char *dir, const char *cmd)
 		return (NULL);
 	full_path = ft_strjoin(tmp, cmd);
 	if (!full_path)
-		return (free_null(tmp), NULL);
-	free_null(tmp);
+		return (free_null((void *)&tmp), NULL);
+	free_null((void *)&tmp);
 	return (full_path);
 }
 
@@ -64,7 +64,7 @@ char	*get_cmd_path(char *cmd, char **envp)
 			return (free_2d(paths), NULL);
 		if (access(full_path, X_OK) == 0)
 			return (free_2d(paths), full_path);
-		free_null(full_path);
+		free_null((void *)&full_path);
 		i++;
 	}
 	free_2d(paths);

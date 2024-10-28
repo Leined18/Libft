@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 11:10:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 11:10:57 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:43:46 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_command	*parse_command(char *input, char **environ)
 		cmd->cmd_path = get_cmd_path(args[0], environ);
 	if ((access(args[0], X_OK) && !cmd->cmd_path) || access(cmd->cmd_path,
 			X_OK))
-		return (free_2d(args), ft_memdel(2, free_null, cmd, cmd->cmd_path),
+		return (free_2d(args), ft_memdel(2, NULL, cmd, cmd->cmd_path),
 			NULL);
 	cmd->command = args[0];
 	cmd->args = args;

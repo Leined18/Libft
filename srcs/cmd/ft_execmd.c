@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:54:18 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 09:56:43 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:41:53 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	execute_command(t_command *cmd)
 	if (result < 0)
 	{
 		free_2d(cmd->args);
-		ft_memdel(3, free_null, cmd, cmd->cmd_path, NULL);
+		ft_memdel(3, NULL, cmd, cmd->cmd_path, NULL);
 		ft_error("Error al ejecutar el comando\n", 1);
 	}
 }
