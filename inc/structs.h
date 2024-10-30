@@ -7,7 +7,7 @@
 /*                                 STRUCTS                                    */
 /* ************************************************************************** */
 
-typedef void			(*t_del_func)(void *);
+typedef void			(*t_del_func)(void **);
 
 typedef struct s_hash_entry
 {

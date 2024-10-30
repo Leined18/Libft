@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:36:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/28 18:53:35 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:38:07 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	ft_memdel(size_t ac, t_del_func del_func, ...)
 	void *ptr;
 
 	if (!del_func)
-		del_func = free;
+		del_func = free_null;
 	va_start(ap, del_func);
 	while (ac--)
 	{
 		ptr = va_arg(ap, void *);
 		if (ptr)
-			del_func(ptr);
+			del_func(&ptr);
 	}
 	va_end(ap);
 }

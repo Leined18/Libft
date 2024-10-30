@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/28 18:53:25 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:44:34 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void		*ft_memset(void *str, int c, size_t n);
 void		ft_memrev(void *ptr, size_t size);
 void		ft_memdel(size_t ac, t_del_func del_func, ...);
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void		free_2d(void *array);
+void		free_2d(char **arr);
 void		free_null(void **ptr);
 
 /* ************************************************************************** */
