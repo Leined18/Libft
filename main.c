@@ -1,72 +1,30 @@
-#include "inc/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/30 12:39:12 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/30 12:39:27 by danpalac         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	send_signal(int pid, int signal)
+#include "libft.h"
+
+int	main(void)
 {
-	if (kill(pid, signal))
-		ft_error("Failed to send signal", 1);
-}
+	char	*single;
+	char	**array;
 
-void	loop_commands(char **envp)
-{
-	char		*input;
-	t_command	*cmd;
-	static char	**env;
-
-	if (envp)
-		env = envp;
-	while (1)
-	{
-		write(1, "minishell> ", 11);
-		input = get_next_line(0);
-		if (!input)
-		{
-			write(1, "exit\n", 5);
-			break ;
-		}
-		input[strcspn(input, "\n")] = 0;
-		cmd = parse_command(input, env);
-		if (cmd)
-		{
-			execute_command(cmd);
-			free_2d(cmd->args);
-			free(cmd);
-			send_signal(getppid(), SIGUSR1);
-		}
-		else
-			ft_error("Failed to parse command", 1);
-		free(input);
-	}
-}
-
-void	ft_handler(int signum)
-{
-	if (signum == SIGUSR1)
-	{
-        loop_commands(NULL);
-	}
-}
-
-int	main(int argc, char **argv, char **envp)
-{
-	pid_t	pid;
-
-    (void)argv;
-	if (argc >= 2)
-	{
-		write(1, "Usage: ./minishell\n", 19);
-		return (1);
-	}
-	signal(SIGUSR1, ft_handler);
-	pid = fork();
-	if (pid == 0)
-		loop_commands(envp);
-	else
-	{
-		while (1)
-		{
-			pause();
-			kill(pid, SIGUSR1);
-		}
-	}
+	// Ejemplo de uso con un puntero simple
+	single = malloc(10);
+	// Ejemplo de uso con un arreglo de punteros
+	array = malloc(sizeof(char *) * 3);
+	array[0] = malloc(10);
+	array[1] = malloc(20);
+	array[2] = NULL; // Fin del arreglo
+	// Liberar memoria utilizando ft_memdel
+	ft_memdel(2, NULL, &single, &array);
 	return (0);
 }
