@@ -6,27 +6,25 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 22:42:33 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/30 11:47:15 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:08:00 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_2d(void *arr)
+void	free_2d(char **arr)
 {
 	size_t	i;
-	void	**array;
 
-	array = (void **)arr;
 	i = 0;
-	if (array)
+	if (arr)
 	{
-		while (array[i])
+		while (arr[i])
 		{
-			free(array[i]);
-			array[i] = NULL;
+			free(arr[i]);
+			arr[i] = NULL;
 			i++;
 		}
-		free(array);
+		free(arr);
 	}
 }
