@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/10/31 08:55:09 by danpalac         ###   ########.fr        #
+#    Updated: 2024/10/31 09:26:30 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,8 +81,6 @@ PRINTF_DIR := printf/
 PRINTF_PUT_DIR := printf/put/
 MATH_DIR := math/
 GET_DIR := get/
-CMD_DIR := cmd/
-
 
 #==========SOURCES============================================================#
 
@@ -110,9 +108,6 @@ MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib ft_fact
 
 GET_FILES := get_next_line
 
-CMD_FILES := ft_create_child ft_create_cmd ft_execmd ft_handle_parent ft_pipe_cmd ft_redirect_input ft_redirect_output\
-			ft_get_cmd_path ft_parse_cmd
-
 #==========FILES###===========================================================#
 
 SRC_FILES+=$(addprefix $(IS_DIR), $(IS_FILES))
@@ -125,7 +120,6 @@ SRC_FILES+=$(addprefix $(PRINTF_DIR), $(PRINTF_FILES))
 SRC_FILES+=$(addprefix $(PRINTF_PUT_DIR), $(PRINTF_PUT_FILES))
 SRC_FILES+=$(addprefix $(MATH_DIR), $(MATH_FILES))
 SRC_FILES+=$(addprefix $(GET_DIR), $(GET_FILES))
-SRC_FILES+=$(addprefix $(CMD_DIR), $(CMD_FILES))
 
 SRCS := $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS := $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))

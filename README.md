@@ -12,7 +12,6 @@ This library contains various useful functions for memory manipulation, strings,
 - [Output Functions (put)](#output-functions-put)
 - [Printing Functions (printf) / Get_next_line](#printing-functions-printf--get_next_line)
 - [Math Functions (math)](#math-functions-math)
-- [CMD Functions (cmd)](#cmd-functions-cmd)
 
 # Functions
 
@@ -127,30 +126,6 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_sqrt]                     | Calculates the square root of a number           |
 | [ft_fact]                     | Calculates the factorial of a number             |
 | [ft_fib]                      | Calculates the nth number in the Fibonacci sequence |
-
-## CMD Functions (cmd)
-| **Function**                   | **Description**                                   |
-| ------------------------------ | ------------------------------------------------- |
-| [create_command]              | Creates a command structure with the arguments passed |
-| [redirect_output]             | Redirects the standard output to the file descriptor passed as argument |
-| [redirect_input]              | Redirects the standard input to the file descriptor passed as argument  |
-| [create_child]                | Creates a child process                           |
-| [handle_parent]               | Handles the parent process                        |
-| [pipe_commands]               | Pipes two commands as passed as arguments        |
-| [execute_command]             | Executes a command                                |
-| [get_cmd_path]                | Gets the command path                             |
-| [parse_command]               | Parses a command and returns a `t_command` struct |
-
-
-[create_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_create_cmd.c
-[execute_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_execmd.c
-[redirect_output]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_redirect_output.c
-[redirect_input]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_redirect_input.c
-[create_child]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_create_child.c
-[handle_parent]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_handle_parent.c
-[pipe_commands]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_pipe_cmd.c
-[get_cmd_path]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_get_cmd_path.c
-[parse_command]: https://github.com/Leined18/Libft/blob/main/srcs/cmd/ft_parse_cmd.c
 
 [ft_isalpha]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalpha.c
 [ft_isalnum]: https://github.com/Leined18/Libft/blob/main/srcs/is/ft_isalnum.c
