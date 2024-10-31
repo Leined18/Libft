@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_hold_mem.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/13 17:36:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/31 08:37:57 by danpalac         ###   ########.fr       */
+/*   Created: 2024/10/31 08:54:11 by danpalac          #+#    #+#             */
+/*   Updated: 2024/10/31 08:54:18 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(size_t ac, t_list *list, ...)
+void	ft_hold_mem(size_t ac, t_list **list, ...)
 {
-	va_list	ap;
-	void	**ptr;
+	va_list ap;
+	void **ptr;
 
 	if (!list)
 		return ;
@@ -25,7 +25,7 @@ void	ft_memdel(size_t ac, t_list *list, ...)
 		ptr = va_arg(ap, void **);
 		if (ptr && *ptr)
 		{
-			free(*ptr);
+			ft_lstadd_back(list, ft_lstnew(*ptr));
 			*ptr = NULL;
 		}
 	}
