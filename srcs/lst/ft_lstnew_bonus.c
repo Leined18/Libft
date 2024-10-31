@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 12:47:44 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/26 10:15:08 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:58:45 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(void **content)
 {
 	t_list	*new_node;
 
@@ -24,17 +24,17 @@ t_list	*ft_lstnew(void *content)
 	return (new_node);
 }
 /*
-int main()
+int	main(void)
 {
-    t_list	*list;
+	t_list	*list;
 	t_list	*list2;
 	int		lol[] = {1, 4, 5, 6};
 
-    list = ft_lstnew("buenas");
-    list2 = ft_lstnew(lol);
-    printf("%zu\n", sizeof(t_list));
-    printf("%s\n", list->content);
-    printf("%s\n", list2->content);
+	list = ft_lstnew("buenas");
+	list2 = ft_lstnew(lol);
+	printf("%zu\n", sizeof(t_list));
+	printf("%s\n", list->content);
+	printf("%s\n", list2->content);
 	free(list);
 	return (0);
 }*/
