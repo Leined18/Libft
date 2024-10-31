@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 22:42:33 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 09:27:52 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:47:15 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	free_2d(void *arr)
 	{
 		while (array[i])
 		{
-			free_null(array[i]);
+			free(array[i]);
 			array[i] = NULL;
 			i++;
 		}
-		free_null(array);
+		free(array);
 	}
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:03:11 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/02 16:44:13 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/31 08:37:01 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		if (del)
 			del(temp->content);
 		free(temp);
+		temp = NULL;
 	}
 	*lst = NULL;
 }
