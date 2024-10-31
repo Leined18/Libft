@@ -6,13 +6,13 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:03:11 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/31 08:37:01 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:07:14 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void **))
 {
 	t_list	*head;
 	t_list	*temp;

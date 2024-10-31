@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:36:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/31 09:36:04 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:08:53 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_memdel(size_t ac, t_list *list, ...)
 
 	va_start(ap, list);
 	if (list)
-		ft_lstclear(&list, free);
+		ft_lstclear(&list, free_null);
 	while (ac-- > 0)
 	{
 		ptr = va_arg(ap, void **);
