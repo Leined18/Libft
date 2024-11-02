@@ -27,11 +27,4 @@ typedef struct s_list
 	struct s_list		*next;
 }						t_list;
 
-typedef struct s_command
-{
-	char				*command;
-	char				*cmd_path;
-	char				**args;
-}						t_command;
-
 #endif // STRUCTS_H
