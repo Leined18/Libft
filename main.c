@@ -6,7 +6,11 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:39:12 by danpalac          #+#    #+#             */
+<<<<<<< Updated upstream
 /*   Updated: 2024/11/07 11:37:22 by danpalac         ###   ########.fr       */
+=======
+/*   Updated: 2024/11/07 12:57:32 by danpalac         ###   ########.fr       */
+>>>>>>> Stashed changes
 /*                                                                            */
 /* ************************************************************************** */
 
