@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 08:54:11 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/31 15:09:35 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:12:06 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ static t_list	*ft_new_mem(void **content)
 
 void	ft_hold_mem(size_t ac, t_list **list, ...)
 {
-	va_list ap;
-	void **ptr;
+	va_list	ap;
+	void	**ptr;
 
 	if (!list)
 		return ;
@@ -36,7 +36,7 @@ void	ft_hold_mem(size_t ac, t_list **list, ...)
 	{
 		ptr = va_arg(ap, void **);
 		if (ptr && *ptr)
-			ft_lstadd_back(list, ft_new_mem(ptr));
+			ft_lstadd_front(list, ft_new_mem(ptr));
 	}
 	va_end(ap);
 }
