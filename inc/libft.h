@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/07 12:42:25 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:24:55 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 /*                                   LIST                                     */
 /* ************************************************************************** */
 
-void	lst_add_2d(t_list **list, char **array);
+void	ft_lstadd_2d(t_list **list, char **array);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void **));

@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:39:12 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/07 14:08:59 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:24:34 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	array[2] = malloc(30);
 	array[3] = NULL;
 	ft_hold_mem(1, &list, &array);
-	lst_add_2d(&list, array);
+	ft_lstadd_2d(&list, array);
 	ft_lstclear(&list, free_null);
 	return (0);
 }
