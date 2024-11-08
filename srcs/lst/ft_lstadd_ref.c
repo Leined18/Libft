@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_null.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_ref.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 09:17:27 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/08 14:09:04 by danpalac         ###   ########.fr       */
+/*   Created: 2024/11/08 14:43:50 by danpalac          #+#    #+#             */
+/*   Updated: 2024/11/08 15:03:25 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_null(void **ptr)
+void	ft_lstadd_ref(t_list **list, t_ref *ref)
 {
-	if (ptr && *ptr)
-	{
-		free(*ptr);
-		*ptr = NULL;
-	}
+	t_list	*new;
+
+	if (!list || !ref)
+		return ;
+	new = ft_lstnew(ref);
+	if (!new)
+		return ;
+	ft_lstadd_back(list, new);
 }
