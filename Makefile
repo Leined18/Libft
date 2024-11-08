@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/11/07 12:44:37 by danpalac         ###   ########.fr        #
+#    Updated: 2024/11/08 14:54:04 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ IS_DIR := is/
 LST_DIR := lst/
 MEM_DIR := mem/
 PUT_DIR := put/
+REF_DIR := ref/
 STR_DIR := str/
 TO_DIR := to/
 PRINTF_DIR := printf/
@@ -92,13 +93,15 @@ MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_mems
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful ft_putstr_color_fd
 
+REF_FILES	:= ft_refadd ft_refdel ft_refnew ft_refadd_back
+
 TO_FILES	:= ft_atoi ft_itoa ft_atol ft_atoll ft_tolower ft_toupper ft_bin2char ft_char2bin ft_bintoa ft_atobin
 
 STR_FILES	:= ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp \
 			ft_strnstr ft_strrchr ft_strtrim ft_strrev ft_substr ft_strrncmp ft_strtok ft_straddc
 
 LST_FILES	:= ft_lstnew_bonus ft_lstadd_front_bonus ft_lstsize_bonus ft_lstlast_bonus ft_lstadd_back_bonus \
-		  	ft_lstdelone_bonus ft_lstclear_bonus ft_lstiter_bonus ft_lstmap_bonus ft_lstadd_2d
+		  	ft_lstdelone_bonus ft_lstclear_bonus ft_lstiter_bonus ft_lstmap_bonus ft_lstadd_2d ft_lstadd_ref
 			
 PRINTF_FILES	:= ft_printf
 
@@ -113,6 +116,7 @@ GET_FILES := get_next_line
 SRC_FILES+=$(addprefix $(IS_DIR), $(IS_FILES))
 SRC_FILES+=$(addprefix $(MEM_DIR), $(MEM_FILES))
 SRC_FILES+=$(addprefix $(PUT_DIR), $(PUT_FILES))
+SRC_FILES+=$(addprefix $(REF_DIR), $(REF_FILES))
 SRC_FILES+=$(addprefix $(TO_DIR), $(TO_FILES))
 SRC_FILES+=$(addprefix $(STR_DIR), $(STR_FILES))
 SRC_FILES+=$(addprefix $(LST_DIR), $(LST_FILES))

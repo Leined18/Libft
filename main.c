@@ -6,33 +6,71 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:39:12 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/08 14:07:08 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:38:39 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_arraylen(char **array)
+void	*ft_calloc_ref(int count, size_t size, t_ref **ref)
 {
-	int	counter;
+	t_ref	*new_ref;
+	void	*memory;
+	int		type;
 
-	counter = 0;
-	while (array[counter])
-		counter++;
-	return (counter);
+	if (size == sizeof(char))
+		type = STRING;
+	else if (size == sizeof(int))
+		type = INT_ARRAY;
+	else if (size == sizeof(char *))
+		type = STRING_ARRAY;
+	else
+		type = 1;
+	memory = malloc(count * size);
+	if (!memory)
+		return (NULL);
+	(ft_bzero(memory, count * size), new_ref = ft_refnew(&memory, "", type));
+	if (!new_ref)
+		return (free_null(&memory), NULL);
+	ft_refadd(ref, &new_ref, NULL);
+	return (memory);
+}
+
+char	*ft_strdup_ref(const char *src, t_ref **ref)
+{
+	t_ref	*new_ref;
+	char	*str;
+
+	str = ft_strdup(src);
+	if (!str)
+		return (NULL);
+	new_ref = ft_refnew((void **)&str, "", STRING);
+	if (!new_ref)
+		return (free_null((void **)&str), NULL);
+	ft_refadd(ref, &new_ref, NULL);
+	return (str);
 }
 
 int	main(void)
 {
-	char	**array;
 	t_list	*list;
+	t_ref	*ref;
+	char	*str;
+	char	*str2;
+	char	**array;
 
-	array = malloc(sizeof(char *) * 3);
-	array[0] = malloc(10);
-	array[1] = malloc(20);
-	array[2] = NULL;
-	ft_hold_mem(3, &list, NULL, &array[0], &array[1]);
-	ft_hold_mem(1, &list, &array);
-	ft_lstclear(&list, free);
+	list = NULL;
+	str = ft_strdup_ref("buenas", &ref);
+	str2 = ft_strdup_ref("buenas2", &ref);
+
+	array = ft_calloc_ref(5, sizeof(char *), &ref);
+	printf("%s\n", str);
+	printf("%s\n", str2);
+	array[0] = ft_strdup("hola");
+	array[1] = ft_strdup("adios");
+	array[2] = ft_strdup("buenas");
+	array[3] = ft_strdup("noches");
+	ft_lstadd_ref(&list, ref);
+	ft_lstclear(&list, ft_refdel);
 	return (0);
 }

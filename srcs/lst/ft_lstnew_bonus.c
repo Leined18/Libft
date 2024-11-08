@@ -6,13 +6,13 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 12:47:44 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/08 14:09:04 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:16:25 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void **content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 

@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:03:11 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/08 14:09:04 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:22:37 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void **))
 		temp = head;
 		head = head->next;
 		if (del)
-			del(temp->content);
+			del(&temp->content);
 		free(temp);
 		temp = NULL;
 	}

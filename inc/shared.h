@@ -15,6 +15,10 @@
 # include <sys/wait.h>
 # include <unistd.h>
 
+# define STRING 1
+# define INT_ARRAY 2
+# define STRING_ARRAY 3
+
 // Definiciones de colores ANSI como macros
 # define BLACK "\033[0;30m"
 # define RED "\033[0;31m"

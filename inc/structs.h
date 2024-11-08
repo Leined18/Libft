@@ -23,8 +23,18 @@ typedef enum e_bool
 
 typedef struct s_list
 {
-	void				**content;
+	void				*content;
 	struct s_list		*next;
 }						t_list;
+
+typedef struct s_ref
+{
+	int					id;
+	char				*name;
+	int					type;
+	void				*ref;
+	void				**addr;
+	struct s_ref		*next;
+}						t_ref;
 
 #endif // STRUCTS_H

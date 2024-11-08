@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/07 12:42:25 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:29:32 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,17 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstnew(void **content);
+t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
+void	ft_lstadd_ref(t_list **list, t_ref *ref);
+
+/* ************************************************************************** */
+/*                                  REF										*/
+/* ************************************************************************** */
+
+t_ref	*ft_refnew(void **ref, char *name, int type);
+void	ft_refdel(void **ref);
+void	ft_refadd_back(t_ref **ref, t_ref *new);
+void	ft_refadd(t_ref **ref, ...);
 
 #endif
