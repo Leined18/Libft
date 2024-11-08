@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/08 17:03:40 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/08 23:37:43 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,7 @@ void	ft_lstadd_ref(t_list **list, t_ref *ref);
 t_ref	*ft_refnew(void **ref, char *name, int type);
 void	ft_refdel(void **ref);
 void	ft_refadd_back(t_ref **ref, t_ref *new);
+void	ft_refadd_front(t_ref **ref, t_ref *new);
 void	ft_refadd(t_ref **ref, ...);
 
 #endif

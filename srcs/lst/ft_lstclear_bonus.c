@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:03:11 by danpalac          #+#    #+#             */
-/*   Updated: 2024/11/08 17:04:41 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/08 23:44:44 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void **))
 		free(temp);
 		temp = NULL;
 	}
-	*lst = NULL;
 }
 /*
 void	free_content(void *content)

@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/11/08 17:03:50 by danpalac         ###   ########.fr        #
+#    Updated: 2024/11/08 23:38:49 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,7 +93,7 @@ MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_mems
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful ft_putstr_color_fd
 
-REF_FILES	:= ft_refadd ft_refdel ft_refnew ft_refadd_back
+REF_FILES	:= ft_refadd ft_refdel ft_refnew ft_refadd_back ft_refadd_front
 
 TO_FILES	:= ft_atoi ft_itoa ft_atol ft_atoll ft_tolower ft_toupper ft_bin2char ft_char2bin ft_bintoa ft_atobin
 
