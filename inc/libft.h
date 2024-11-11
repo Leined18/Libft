@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/31 08:53:36 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/11 13:41:01 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,6 @@
 # include "get_next_line.h"
 # include "shared.h"
 # include "structs.h"
-
-/* ************************************************************************** */
-/*                                 COMMANDS                                   */
-/* ************************************************************************** */
-
-t_command	*create_command(char *cmd, char *arg);
-void		execute_command(t_command *cmd);
-void		redirect_output(int fd);
-void		redirect_input(int fd);
-void		create_child(t_command *cmd, int *pipefd, int child_num);
-void		pipe_commands(t_command *cmd1, t_command *cmd2);
-void		handle_parent(int *pipefd, pid_t pid1, pid_t pid2);
-char		*get_cmd_path(char *cmd, char **envp);
-t_command	*parse_command(char *input, char **environ);
 
 /* ************************************************************************** */
 /*                                  CHECK                                     */

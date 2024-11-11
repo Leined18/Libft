@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/10/31 08:55:09 by danpalac         ###   ########.fr        #
+#    Updated: 2024/11/11 13:40:38 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,8 +81,6 @@ PRINTF_DIR := printf/
 PRINTF_PUT_DIR := printf/put/
 MATH_DIR := math/
 GET_DIR := get/
-CMD_DIR := cmd/
-
 
 #==========SOURCES============================================================#
 
@@ -109,9 +107,6 @@ PRINTF_PUT_FILES := ft_putaddr ft_putbase_fd ft_putchar ft_puthexa ft_putnbr ft_
 MATH_FILES	:= ft_abs ft_index ft_insort ft_sqrt ft_fib ft_fact 
 
 GET_FILES := get_next_line
-
-CMD_FILES := ft_create_child ft_create_cmd ft_execmd ft_handle_parent ft_pipe_cmd ft_redirect_input ft_redirect_output\
-			ft_get_cmd_path ft_parse_cmd
 
 #==========FILES###===========================================================#
 
