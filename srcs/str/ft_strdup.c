@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:03:56 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/26 12:13:17 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:31:02 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strdup(const char *s1)
 {
 	char	*ptr;
 
+	if (!s1)
+		return (NULL);
 	ptr = malloc(ft_strlen(s1) + 1);
 	if (!ptr)
 		return (NULL);
@@ -38,17 +40,17 @@ char	*ft_strdup(const char *s1)
 	return (ptr);
 }
 /*
-int main()
+int	main(void)
 {
 	char *s1 = "tamaño";
-    char *custom	= ft_strdup(NULL);
+	char *custom	= ft_strdup(NULL);
 	//char *original	= strdup(NULL);
 
-    //printf("Original: %s\n", original);
-    printf("Custom  : %s\n", custom);
+	//printf("Original: %s\n", original);
+	printf("Custom  : %s\n", custom);
 
-    free(custom);
+	free(custom);
 	//free(original);
 
-    return 0;
+	return (0);
 }*/
