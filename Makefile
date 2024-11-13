@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/11/11 14:55:32 by danpalac         ###   ########.fr        #
+#    Updated: 2024/11/13 12:06:01 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,13 +64,14 @@ AR			:= ar rcs
 LIB			:= ranlib
 MKDIR 		:= mkdir -p
 
-
 ##==========DIRECTORIES=======================================================#
 
-INCLUDES := inc/
+INC := inc/
 SRC_DIR := srcs/
 OBJ_DIR := obj/
+LIB_DIR := ../lib/
 
+INCLUDES := $(INC)*.h
 IS_DIR := is/
 LST_DIR := lst/
 MEM_DIR := mem/
@@ -133,18 +134,21 @@ all: $(NAME)
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c Makefile
 	@mkdir -p $(dir $@)
 	@printf "%b" "$(BOLD_CYAN)[LIBFT]:\t$(DEF_COLOR)$(BOLD_GREEN)$<$(DEF_COLOR)\r"
-	@$(CC) $(CFLAGS) -I$(INCLUDES) -MMD -MP -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INC) -MMD -MP -c $< -o $@
 	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)\r"
 
 $(NAME) : $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)"
 	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
+	@$(MKDIR) $(LIB_DIR) 
+	@cp $(NAME) $(INCLUDES) $(LIB_DIR)
 
 p: $(NAME)
-	@$(CC) $(CFLAGS) -I$(INCLUDES) main.c libft.a -o program
+	@$(CC) $(CFLAGS) -I$(INC) main.c libft.a -o program
 
 clean: 
+	@$(RM) $(LIB_DIR)
 	@$(RM) -rf $(OBJ_DIR) 
 
 fclean: clean
@@ -153,7 +157,7 @@ fclean: clean
 re: fclean all
 
 norm:
-	@norminette $(SRC) $(INCLUDES) | grep -v Norme -B1 || true
+	@norminette $(SRC) $(INC) | grep -v Norme -B1 || true
 
 -include $(DEPS)
 
