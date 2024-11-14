@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/11/13 12:06:01 by danpalac         ###   ########.fr        #
+#    Updated: 2024/11/14 11:27:05 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -129,6 +129,7 @@ DEPS := $(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 
 #==========RULES==============================================================#
 
+-include $(DEPS)
 all: $(NAME)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c Makefile
@@ -144,12 +145,12 @@ $(NAME) : $(OBJS)
 	@$(MKDIR) $(LIB_DIR) 
 	@cp $(NAME) $(INCLUDES) $(LIB_DIR)
 
-p: $(NAME)
+p: main.c $(NAME)
 	@$(CC) $(CFLAGS) -I$(INC) main.c libft.a -o program
 
 clean: 
 	@$(RM) $(LIB_DIR)
-	@$(RM) -rf $(OBJ_DIR) 
+	@$(RM) $(OBJ_DIR)
 
 fclean: clean
 	@$(RM) $(NAME) program a.out
@@ -158,7 +159,5 @@ re: fclean all
 
 norm:
 	@norminette $(SRC) $(INC) | grep -v Norme -B1 || true
-
--include $(DEPS)
 
 .PHONY: all clean fclean re norm
