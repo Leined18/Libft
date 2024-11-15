@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:39:12 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/31 08:58:30 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:57:29 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,10 @@ void	check(void *content)
 int	main(void)
 {
 	char	**array;
-	t_list	*list;
 
-	array = malloc(sizeof(char *) * 3);
-	array[0] = malloc(10);
-	array[1] = malloc(20);
-	array[2] = NULL;
-	ft_hold_mem(3, &list, NULL, &array[0], &array[1]);
-	ft_hold_mem(1, &list, &array);
-	ft_lstclear(&list, free);
+	array = ft_split("hola que tal", ' ');
+    (void)array;
+    t_list *list = ft_lstnew(array);
+	ft_hold_mem(1, list);
 	return (0);
 }

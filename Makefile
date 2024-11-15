@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2024/11/14 11:27:05 by danpalac         ###   ########.fr        #
+#    Updated: 2024/11/15 11:55:27 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -145,7 +145,7 @@ $(NAME) : $(OBJS)
 	@$(MKDIR) $(LIB_DIR) 
 	@cp $(NAME) $(INCLUDES) $(LIB_DIR)
 
-p: main.c $(NAME)
+p: $(NAME)
 	@$(CC) $(CFLAGS) -I$(INC) main.c libft.a -o program
 
 clean: 
