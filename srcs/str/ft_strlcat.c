@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:30:41 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/26 12:10:59 by danpalac         ###   ########.fr       */
+/*   Updated: 2024/12/17 17:53:55 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	size_t		total_len;
 	const char	*s;
 
+	if (!dst && !src)
+		return (0);
 	s = src;
 	dst_len = 0;
 	while (dst[dst_len] && dst_len < dstsize)
@@ -35,7 +37,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	return (total_len);
 }
 /*
-int main()
+int	main(void)
 {
 	char src[] = "buenas";
 	char dst[] = "t";
