@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2025/01/09 12:12:07 by danpalac         ###   ########.fr        #
+#    Updated: 2025/01/13 11:23:14 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -149,8 +149,10 @@ p: $(NAME)
 	@$(CC) $(CFLAGS) -I$(INC) main.c libft.a -o program
 
 clean: 
-	@$(RM) $(LIB_DIR)
-	@$(RM) $(OBJ_DIR)
+	@if [ -d "$(OBJ_DIR)" ]; then \
+		$(RM) $(OBJ_DIR) $(LIB_DIR); \
+		echo "$(CYAN)[$(NAME)]:\tobject files $(GREEN) => Cleaned!$(DEF_COLOR)"; \
+	fi
 
 fclean: clean
 	@$(RM) $(NAME) program a.out
