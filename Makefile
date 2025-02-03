@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2025/01/13 11:23:14 by danpalac         ###   ########.fr        #
+#    Updated: 2025/02/03 17:25:46 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,11 @@ DARK_GRAY   = \033[38;5;235m
 LIGHT_RED   = \033[38;5;203m
 LIGHT_BLUE  = \033[38;5;75m
 
+BRIGHT_BLUE = \033[38;5;27m
+BRIGHT_GREEN= \033[38;5;46m
+BRIGHT_YELLOW=\033[38;5;226m
+BRIGHT_CYAN = \033[38;5;51m
+BRIGHT_WHITE= \033[38;5;231m
 
 # Reseteo de color
 NO_COLOR    = \033[0m
@@ -140,8 +145,8 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c Makefile
 
 $(NAME) : $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@printf "%b" "$(BOLD_BLUE)$(DEF_COLOR)"
-	@printf "%b" "$(CLEAR_LINE)$(BOLD_CYAN)Compilation complete!$(DEF_COLOR)\n"
+	@echo "$(BOLD_BLUE)[$(BRIGHT_GREEN)$(NAME)$(DEF_COLOR)$(BOLD_BLUE)] compiled!$(DEF_COLOR)"
+	@echo "$(TURQUOISE)------------\n| Done! 👌 |\n------------$(DEF_COLOR)"
 	@$(MKDIR) $(LIB_DIR) 
 	@cp $(NAME) $(INCLUDES) $(LIB_DIR)
 
