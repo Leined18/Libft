@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:34:30 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/26 12:14:24 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/06 10:46:06 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ static size_t	char_check(char const *str, char const c)
 	return (0);
 }
 
-static char	*str_new(size_t n)
+static char	*str_new(int n)
 {
 	char	*str;
 
+	if (n <= 0)
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * (n + 1));
 	if (!str)
 		return (NULL);
@@ -66,10 +68,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trim);
 }
 /*
-int	main()
+int	main(void)
 {
 	char s1[] = "lorem ipsum dolor sit amet";
-    printf("%s\n", ft_strtrim(s1, "te"));
+	printf("%s\n", ft_strtrim(s1, "te"));
 
-	return 0;
+	return (0);
 }*/
