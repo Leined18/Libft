@@ -14,8 +14,8 @@
 
 size_t	ft_strcspn(const char *s, const char *reject)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (s[i])
