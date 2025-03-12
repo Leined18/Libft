@@ -6,7 +6,7 @@
 #    By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2025/02/03 17:25:46 by danpalac         ###   ########.fr        #
+#    Updated: 2025/03/12 12:57:17 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,9 +72,11 @@ MKDIR 		:= mkdir -p
 ##==========DIRECTORIES=======================================================#
 
 INC := inc/
+
 SRC_DIR := srcs/
 OBJ_DIR := obj/
 LIB_DIR := ../lib/
+LIBFT_LIB := $(LIB_DIR)libft/
 
 INCLUDES := $(INC)*.h
 IS_DIR := is/
@@ -147,8 +149,9 @@ $(NAME) : $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@echo "$(BOLD_BLUE)[$(BRIGHT_GREEN)$(NAME)$(DEF_COLOR)$(BOLD_BLUE)] compiled!$(DEF_COLOR)"
 	@echo "$(TURQUOISE)------------\n| Done! 👌 |\n------------$(DEF_COLOR)"
-	@$(MKDIR) $(LIB_DIR) 
-	@cp $(NAME) $(INCLUDES) $(LIB_DIR)
+	@$(MKDIR) $(LIB_DIR)
+	@cp $(NAME) $(LIB_DIR)
+	@cp -r inc $(LIB_DIR)
 
 p: $(NAME)
 	@$(CC) $(CFLAGS) -I$(INC) main.c libft.a -o program
