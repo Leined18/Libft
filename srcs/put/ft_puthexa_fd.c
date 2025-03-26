@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:37:47 by danpalac          #+#    #+#             */
-/*   Updated: 2024/03/08 13:37:54 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:17:12 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthexa(unsigned long n, char format)
+int	ft_puthexa_fd(unsigned long n, char format, int fd)
 {
 	char			*base;
 	unsigned int	num;
@@ -27,10 +27,11 @@ int	ft_puthexa(unsigned long n, char format)
 	num = (unsigned int)n;
 	base_len = ft_strlen(base);
 	if (num > (base_len - 1))
-		i += ft_puthexa(num / base_len, format);
-	i += ft_putchar(*(base + (num % base_len)));
+		i += ft_puthexa_fd(num / base_len, format, fd);
+	i += ft_putchar_fd(*(base + (num % base_len)), fd);
 	return (i);
 }
+
 /*
 int main(void)
 {

@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_printf_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 14:16:26 by danpalac          #+#    #+#             */
-/*   Updated: 2025/03/21 10:49:40 by danpalac         ###   ########.fr       */
+/*   Created: 2025/03/26 11:53:07 by danpalac          #+#    #+#             */
+/*   Updated: 2025/03/26 12:52:01 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char const *s)
+int	ft_printf_fd(int fd, const char *str, ...)
 {
-	int	result;
-	int len;
+	va_list args;
+	int i;
+	int length;
 
-	result = 0;
-	len = 0;
-	if (!s)
-		return (write(1, "(null)", 6));
-	while (s[len])
-		result += ft_putchar(s[len++]);
-	return (result);
+	if (!str)
+		return (-1);
+	i = 0;
+	length = 0;
+	va_start(args, str);
+	while (*(str + i))
+	{
+		if (*(str + i) == '%' && ft_strchr("cspdiuxX%", *(str + i + 1)))
+		{
+			length += ft_format(args, *(str + i + 1), fd);
+			i++;
+		}
+		else
+			length += ft_putchar_fd(*(str + i), fd);
+		i++;
+	}
+	va_end(args);
+	return (length);
 }
-/*
-int main()
-{
-	ft_putstr("adios");
-	return 0;
-}*/

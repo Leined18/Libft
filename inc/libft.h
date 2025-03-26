@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2025/01/09 12:11:41 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:56:01 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,15 @@ int		ft_sqrt(int number);
 /*                                  PUT										*/
 /* ************************************************************************** */
 
-void	ft_putstr_color_fd(char *color, char *s, int fd);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
+int     ft_putbase_fd(int nbr, const char *base, int fd);
+int		ft_puthexa_fd(unsigned long n, char format, int fd);
+int		ft_putunsigned_fd(unsigned long n, int fd);
+int		ft_putaddress_fd(void *format, int fd);
+int		ft_putstr_color_fd(char *color, char *s, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putendl_fd(char *s, int fd);
+int		ft_putnbr_fd(int n, int fd);
+int		ft_putstr_fd(char *s, int fd);
 void	ft_error(char *err, t_bool yeet);
 void	ft_successful(char *msg, t_bool yeet);
 

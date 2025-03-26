@@ -3,38 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:02:45 by danpalac          #+#    #+#             */
-/*   Updated: 2024/07/09 12:28:30 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:52:19 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_format(va_list args, const char format)
+int	ft_format(va_list args, const char format, int fd)
 {
 	void	*p;
 
 	if (format == 'd' || format == 'i')
-		return (ft_putnbr(va_arg(args, int)));
+		return (ft_putnbr_fd(va_arg(args, int), fd));
 	else if (format == 'c')
-		return (ft_putchar(va_arg(args, int)));
+		return (ft_putchar_fd(va_arg(args, int), fd));
 	else if (format == 's')
-		return (ft_putstr(va_arg(args, char *)));
+		return (ft_putstr_fd(va_arg(args, char *), fd));
 	else if (format == 'p')
 	{
 		p = va_arg(args, void *);
 		if (p)
-			return (ft_putaddress(p));
-		return (ft_putstr("(nil)"));
+			return (ft_putaddress_fd(p, fd));
+		return (ft_putstr_fd("(nil)", fd));
 	}
 	else if (format == 'u')
-		return (ft_putunsigned(va_arg(args, unsigned int)));
+		return (ft_putunsigned_fd(va_arg(args, unsigned int), fd));
 	else if (format == 'X' || format == 'x')
-		return (ft_puthexa(va_arg(args, int), format));
+		return (ft_puthexa_fd(va_arg(args, int), format, fd));
 	else if (format == '%')
-		return (ft_putchar('%'));
+		return (ft_putchar_fd('%', fd));
 	else
 		return (-1);
 }
@@ -54,18 +54,18 @@ int	ft_printf(const char *str, ...)
 	{
 		if (*(str + i) == '%' && ft_strchr("cspdiuxX%", *(str + i + 1)))
 		{
-			length += ft_format(args, *(str + i + 1));
+			length += ft_format(args, *(str + i + 1), 1);
 			i++;
 		}
 		else
-			length += ft_putchar(*(str + i));
+			length += ft_putchar_fd(*(str + i), 1);
 		i++;
 	}
 	va_end(args);
 	return (length);
 }
 /*
-int main(void)
+int	main(void)
 {
 	void	*p;
 	char	s[] = "buenas";
@@ -76,5 +76,5 @@ int main(void)
 	ft_printf("\nMI FUNCION\n!!!!!!!!!!SEPARADOR¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡\nORIGINAL\n");
 
 	printf("%d", printf("\001\002\007\v\010\f\r\n"));
-    return (0);
+	return (0);
 }*/

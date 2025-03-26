@@ -6,20 +6,20 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:02:49 by danpalac          #+#    #+#             */
-/*   Updated: 2025/02/11 11:35:20 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:47:40 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	size_t	len;
 
 	if (!s)
-		return ;
+		return (write(fd, "(null)", 6));
 	len = ft_strlen(s);
-	write(fd, s, len);
+	return (write(fd, s, len));
 }
 /*
 int	main(void) {

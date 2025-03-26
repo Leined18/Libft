@@ -3,31 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:03:22 by danpalac          #+#    #+#             */
-/*   Updated: 2024/01/25 09:44:49 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:10:07 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+int	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	int	len;
+
+	len = ft_putstr_fd(s, fd);
+	len += ft_putchar_fd('\n', fd);
+	return (len);
 }
 /*
-int main() {
-    // Write C code here
-    char c[] = "Ayuda";
-    int i = 0;
+int	main(void) {
+	// Write C code here
+	char c[] = "Ayuda";
+	int i = 0;
 
-    while (i < sizeof(short int))
-    {
-        ft_putendl_fd(c,1);
-        i++;
-    }
+	while (i < sizeof(short int))
+	{
+		ft_putendl_fd(c,1);
+		i++;
+	}
 
-    return 0;
+	return (0);
 }*/

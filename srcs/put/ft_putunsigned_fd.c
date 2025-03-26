@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunsigned.c                                   :+:      :+:    :+:   */
+/*   ft_putunsigned_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:38:23 by danpalac          #+#    #+#             */
-/*   Updated: 2024/03/08 13:38:54 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:42:30 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putunsigned(unsigned long n)
+int	ft_putunsigned_fd(unsigned long n, int fd)
 {
 	int		len;
 	char	*base;
@@ -20,12 +20,12 @@ int	ft_putunsigned(unsigned long n)
 	len = 0;
 	base = "0123456789";
 	if (n > (ft_strlen(base) - 1))
-		len += ft_putunsigned(n / ft_strlen(base));
-	len += ft_putchar(*(base + (n % ft_strlen(base))));
+		len += ft_putunsigned_fd(n / ft_strlen(base), fd);
+	len += ft_putchar_fd(*(base + (n % ft_strlen(base))), fd);
 	return (len);
 }
 /*
-int main(void)
+int	main(void)
 {
 	unsigned long number = 429; // Example number
 	int printed_chars;

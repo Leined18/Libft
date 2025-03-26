@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:06:26 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 10:58:19 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:51:22 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,8 @@
 # include "libft.h"
 # include "shared.h"
 
-int		ft_nbrlen(long n);
-int		ft_putnbr(int n);
-int		ft_putchar(int c);
-int		ft_printf(const char *str, ...);
-long	ft_abs(long n);
-void	ft_putbase_fd(int nbr, const char *base, int fd);
-int		ft_puthexa(unsigned long n, char format);
-int		ft_putstr(char const *s);
-int		ft_putunsigned(unsigned long n);
-int		ft_putaddress(void *format);
+int	ft_format(va_list args, const char format, int fd);
+int	ft_printf_fd(int fd, const char *format, ...);
+int	ft_printf(const char *format, ...);
 
 #endif

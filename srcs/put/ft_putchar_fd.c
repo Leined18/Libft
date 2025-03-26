@@ -3,25 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:02:23 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/26 12:22:29 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/03/26 11:59:53 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (write(fd, &c, 1) == -1)
+		return (-1);
+	return (1);
 }
 /*
-int main() {
-    // Write C code here
-    char c = 'a';
+int	main(void) {
+	// Write C code here
+	char c = 'a';
 
-    ft_putchar_fd(NULL,1);
+	ft_putchar_fd(NULL,1);
 
-    return 0;
+	return (0);
 }*/
