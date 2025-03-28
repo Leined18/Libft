@@ -14,9 +14,9 @@
 
 int	ft_printf_fd(int fd, const char *str, ...)
 {
-	va_list args;
-	int i;
-	int length;
+	va_list	args;
+	int		i;
+	int		length;
 
 	if (!str)
 		return (-1);

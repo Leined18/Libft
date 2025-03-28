@@ -64,7 +64,7 @@ int		ft_sqrt(int number);
 /*                                  PUT										*/
 /* ************************************************************************** */
 
-int     ft_putbase_fd(int nbr, const char *base, int fd);
+int		ft_putbase_fd(int nbr, const char *base, int fd);
 int		ft_puthexa_fd(unsigned long n, char format, int fd);
 int		ft_putunsigned_fd(unsigned long n, int fd);
 int		ft_putaddress_fd(void *format, int fd);

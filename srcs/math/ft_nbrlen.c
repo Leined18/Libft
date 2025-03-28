@@ -14,19 +14,19 @@
 
 int	ft_nbrlen(long n)
 {
-    int	i;
+	int	i;
 
-    if (n < 0)
-    {
-        n = ft_abs(n);
-        i = 1;
-    }
-    else
-        i = 0;
-    while (n >= 10)
-    {
-        n /= 10;
-        i++;
-    }
-    return (i + 1);
+	if (n < 0)
+	{
+		n = ft_abs(n);
+		i = 1;
+	}
+	else
+		i = 0;
+	while (n >= 10)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i + 1);
 }
