@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 13:33:09 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/02 16:26:46 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:59:39 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
@@ -16,12 +17,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	if (!lst || !del)
 		return ;
 	del(lst->content);
-	free(lst);
+	freec(lst);
 }
 /*
-void free_content(void *content)
+void freec_content(void *content)
 {
-    free(content);
+    freec(content);
 }
 
 int main()
@@ -36,7 +37,7 @@ int main()
 
     printf("Before deletion: %s\n", (char *)head->content);
 
-    ft_lstdelone(head, free_content);
+    ft_lstdelone(head, freec_content);
 
     printf("After deletion: %s\n", (char *)head->content);
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:28:38 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/08 11:36:01 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ int main()
     printf("i1: %p\n", (void *)i1);
     printf("i2: %p\n", (void *)i2);
 
-    free(i1);
-    free(i2);
+    freec(i1);
+    freec(i2);
 
     return 0;
 }*/

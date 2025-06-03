@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 12:44:00 by danpalac          #+#    #+#             */
-/*   Updated: 2025/05/19 11:15:51 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ int main()
         current = current->next;
     }
 
-    free(new_node);
+    freec(new_node);
     return 0;
 }*/

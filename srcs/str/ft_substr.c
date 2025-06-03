@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 09:37:56 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/15 20:50:43 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(void)
 	if (subcadena != NULL)
 	{
 		printf("Subcadena: %s\n", subcadena);
-		free(subcadena);
+		freec(subcadena);
 	}
 	return (0);
 }*/

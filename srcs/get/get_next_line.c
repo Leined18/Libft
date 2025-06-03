@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 16:36:23 by danpalac          #+#    #+#             */
-/*   Updated: 2024/06/12 10:19:03 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static char	*get_buffer(int fd, char *store, char *buffer)
 		rd = read(fd, buffer, BUFFER_SIZE);
 		if (rd == -1)
 		{
-			free(store);
+			freec(store);
 			return (NULL);
 		}
 		else if (rd == 0)
@@ -34,7 +34,7 @@ static char	*get_buffer(int fd, char *store, char *buffer)
 			store = ft_strdup("");
 		aux = store;
 		store = ft_strjoin(aux, buffer);
-		free(aux);
+		freec(aux);
 		aux = NULL;
 		if (ft_strchr(buffer, '\n'))
 			break ;
@@ -55,7 +55,7 @@ static char	*get_line(char *line_buffer)
 	res = ft_substr(line_buffer, i + 1, ft_strlen(line_buffer) - i);
 	if (*res == 0)
 	{
-		free(res);
+		freec(res);
 		res = NULL;
 	}
 	line_buffer[i + 1] = 0;
@@ -71,8 +71,8 @@ char	*get_next_line(int fd)
 	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
-		free(store[fd]);
-		free(buffer);
+		freec(store[fd]);
+		freec(buffer);
 		buffer = NULL;
 		store[fd] = NULL;
 		return (NULL);
@@ -80,7 +80,7 @@ char	*get_next_line(int fd)
 	if (!buffer)
 		return (NULL);
 	line = get_buffer(fd, store[fd], buffer);
-	free(buffer);
+	freec(buffer);
 	buffer = NULL;
 	if (!line)
 		return (store[fd] = NULL, NULL);
@@ -100,7 +100,7 @@ int	main(void)
 	while (line != NULL)
 	{
 		printf("%s", line);
-		free(line);
+		freec(line);
 		line = get_next_line(fd1);
 	}
 	printf("\n");
@@ -108,7 +108,7 @@ int	main(void)
 	while (line != NULL)
 	{
 		printf("%s", line);
-		free(line);
+		freec(line);
 		line = get_next_line(fd2);
 	}
 	close(fd1);

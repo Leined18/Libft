@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isndup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 11:44:02 by danpalac          #+#    #+#             */
-/*   Updated: 2024/09/02 12:13:36 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	add_to_hash_table(t_hash_entry **table, int64_t value)
 	table[index] = entry;
 }
 
-static void	free_entries(t_hash_entry *entry)
+static void	freec_entries(t_hash_entry *entry)
 {
 	t_hash_entry	*temp;
 
@@ -59,7 +59,7 @@ static void	free_entries(t_hash_entry *entry)
 	{
 		temp = entry;
 		entry = entry->next;
-		free(temp);
+		freec(temp);
 	}
 }
 
@@ -87,6 +87,6 @@ t_bool	ft_isndup(int *num, int size)
 	}
 	i = -1;
 	while (++i < TABLE_SIZE)
-		free_entries(table[i]);
+		freec_entries(table[i]);
 	return (duplicate);
 }

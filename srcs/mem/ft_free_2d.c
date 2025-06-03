@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_2d.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 22:42:33 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/30 11:47:15 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:59:12 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_2d(void *arr)
+void	freec_2d(void *arr)
 {
 	size_t	i;
 	void	**array;
@@ -23,10 +23,10 @@ void	free_2d(void *arr)
 	{
 		while (array[i])
 		{
-			free(array[i]);
+			freec(array[i]);
 			array[i] = NULL;
 			i++;
 		}
-		free(array);
+		freec(array);
 	}
 }

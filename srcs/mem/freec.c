@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_null.c                                     :+:      :+:    :+:   */
+/*   freec.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 09:17:27 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:56:51 by daniel           ###   ########.fr       */
+/*   Created: 2025/06/03 21:51:28 by daniel            #+#    #+#             */
+/*   Updated: 2025/06/03 22:01:07 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * free_null - Libera la memoria de un puntero y lo establece a NULL.
- * @ptr: Doble puntero al elemento a liberar.
+ * freec - Libera la memoria de un puntero y lo establece a NULL.
+ * @ptr: Puntero al elemento a liberar.
  *
  * Esta función libera la memoria ocupada por el elemento apuntado por ptr
- * y establece ptr a NULL. También lleva un conteo de las liberaciones realizadas.
+ * y lo establece a NULL. También lleva un conteo de las liberaciones realizadas.
  * 
  * Retorna el número total de liberaciones realizadas.
  */
 
-int	free_null(void **ptr)
+int	freec(void *ptr)
 {
-	int freec_count;
+   static int	freec_count = 0;
 
-	freec_count = 0;
-	if (ptr && *ptr)
-	{
-		freec_count = freec(*ptr);
-		*ptr = NULL;
-	}
-	return (freec_count);
+    if (ptr)
+    {
+        free(ptr);
+        ptr = NULL;
+        freec_count++;
+    }
+    return (freec_count); 
 }

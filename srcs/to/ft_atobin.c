@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtobin.c                                      :+:      :+:    :+:   */
+/*   ft_atobin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:38:40 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 11:55:13 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	copy_bin(char *bin, char *char_bin, size_t *j)
 		(*j)++;
 		k++;
 	}
-	free(char_bin);
+	freec(char_bin);
 }
 
 char	*ft_atobin(const char *str)
@@ -46,7 +46,7 @@ char	*ft_atobin(const char *str)
 	{
 		char_bin = ft_char2bin((unsigned char)str[i]);
 		if (!char_bin)
-			return (free(bin), NULL);
+			return (freec(bin), NULL);
 		copy_bin(bin, char_bin, &j);
 	}
 	bin[j] = '\0';

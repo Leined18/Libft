@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid>       +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:32:51 by danpalac          #+#    #+#             */
-/*   Updated: 2024/02/09 11:44:23 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	lst_clear(t_list **lst, void (*del)(void *))
 		return ;
 	lst_clear(&(*lst)->next, del);
 	del((*lst)->content);
-	free(*lst);
+	freec(*lst);
 	*lst = NULL;
 }
 

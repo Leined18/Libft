@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 09:47:33 by danpalac          #+#    #+#             */
-/*   Updated: 2024/10/16 11:02:33 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ static size_t	get_word_len(char const *s, char c)
 }
 
 // para liberar espacio del array
-static void	free_array(size_t i, char **array)
+static void	freec_array(size_t i, char **array)
 {
 	while (i > 0)
 	{
 		i--;
-		free(array[i]);
+		freec(array[i]);
 	}
-	free(array);
+	freec(array);
 }
 
 // para dividir la string
@@ -70,7 +70,7 @@ static char	**split(char const *s, char c, char **array, size_t words_count)
 		array[i] = ft_substr(s, j, get_word_len(&s[j], c));
 		if (!array[i])
 		{
-			free_array(i, array);
+			freec_array(i, array);
 			return (NULL);
 		}
 		while (s[j] && s[j] != c)
@@ -123,9 +123,9 @@ int main()
 	int i = 0;
 	while (result[i])
 	{
-		free(result[i]);
+		freec(result[i]);
 		i++;
 	}
-	free(result);
+	freec(result);
 	return 0;
 }*/
