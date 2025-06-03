@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2025/05/14 13:26:17 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:37:10 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	free_2d(void *array);
 void	free_null(void **ptr);
 void	ft_hold_mem(size_t ac, ...);
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
 /* ************************************************************************** */
 /*                                  MATHS									*/

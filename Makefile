@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
+#    By: daniel <daniel@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2025/05/14 13:24:45 by danpalac         ###   ########.fr        #
+#    Updated: 2025/06/03 19:36:43 by daniel           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ GET_DIR := get/
 IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace ft_isndup ft_isstrnum
 
 MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset\
-			   ft_memrev ft_memccpy ft_memdel ft_free_2d ft_free_null ft_hold_mem
+			   ft_memrev ft_memccpy ft_memdel ft_free_2d ft_free_null ft_hold_mem ft_realloc
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful ft_putstr_color_fd\
 				ft_putaddr_fd ft_putbase_fd ft_puthexa_fd ft_putunsigned_fd
