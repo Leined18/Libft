@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:03:56 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
+/*   Updated: 2025/06/05 10:04:39 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ int	main(void)
 	//printf("Original: %s\n", original);
 	printf("Custom  : %s\n", custom);
 
-	freec(custom);
-	//freec(original);
+	free(custom);
+	//free(original);
 
 	return (0);
 }*/

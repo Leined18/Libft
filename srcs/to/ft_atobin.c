@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atobin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:38:40 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
+/*   Updated: 2025/06/05 10:04:39 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	copy_bin(char *bin, char *char_bin, size_t *j)
 		(*j)++;
 		k++;
 	}
-	freec(char_bin);
+	free(char_bin);
 }
 
 char	*ft_atobin(const char *str)
@@ -46,7 +46,7 @@ char	*ft_atobin(const char *str)
 	{
 		char_bin = ft_char2bin((unsigned char)str[i]);
 		if (!char_bin)
-			return (freec(bin), NULL);
+			return (free(bin), NULL);
 		copy_bin(bin, char_bin, &j);
 	}
 	bin[j] = '\0';

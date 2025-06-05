@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:26:06 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
+/*   Updated: 2025/06/05 10:04:39 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,6 @@ int	main(void)
 	scanf("%d", &n); // Lee un entero de la entrada estándar
 	result = ft_itoa(n); // Convierte el entero a cadena de caracteres
 	printf("%s\n", result); // Imprime la cadena resultante
-	freec(result); // Libera la memoria asignada para result
+	free(result); // Libera la memoria asignada para result
 	return (0);
 }*/

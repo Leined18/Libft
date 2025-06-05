@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putaddr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:37:34 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
+/*   Updated: 2025/06/05 10:04:39 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(void)
     
     void* memory_address = malloc(sizeof(int));
     chars_written = ft_putaddress(memory_address);
-    freec(memory_address);
+    free(memory_address);
     
     void* null_pointer = NULL;
     chars_written = ft_putaddress(null_pointer);

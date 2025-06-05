@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_straddc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 20:22:44 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
+/*   Updated: 2025/06/05 10:04:39 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ char	*ft_straddc(char *str, char c)
 		return (ft_straddc_first(c));
 	add = (char *)malloc(sizeof(char) * (ft_strlen(str) + 2));
 	if (!add)
-		return (freec(str), NULL);
+		return (free(str), NULL);
 	i = -1;
 	while (str[++i])
 		add[i] = str[i];
-	freec(str);
+	free(str);
 	add[i++] = c;
 	add[i] = '\0';
 	return (add);

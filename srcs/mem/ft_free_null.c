@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_null.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:17:27 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:56:51 by daniel           ###   ########.fr       */
+/*   Updated: 2025/06/05 10:06:13 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,17 @@
  * free_null - Libera la memoria de un puntero y lo establece a NULL.
  * @ptr: Doble puntero al elemento a liberar.
  *
- * Esta función libera la memoria ocupada por el elemento apuntado por ptr
- * y establece ptr a NULL. También lleva un conteo de las liberaciones realizadas.
- * 
- * Retorna el número total de liberaciones realizadas.
+ * Esta función verifica si el puntero no es NULL y si apunta a un bloque de
+ * memoria asignado. Si es así, libera la memoria y establece el puntero a NULL
+
+ * para evitar referencias colgantes.
  */
 
-int	free_null(void **ptr)
+void	free_null(void **ptr)
 {
-	int freec_count;
-
-	freec_count = 0;
 	if (ptr && *ptr)
 	{
-		freec_count = freec(*ptr);
+		free(*ptr);
 		*ptr = NULL;
 	}
-	return (freec_count);
 }

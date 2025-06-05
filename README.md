@@ -40,9 +40,9 @@ This library contains various useful functions for memory manipulation, strings,
 | [ft_memset]                   | Sets a value in a memory block                   |
 | [ft_memrev]                   | Reverses a memory block                           |
 | [ft_memccpy]                  | Copies up to a specific character                |
-| [ft_memdel]                   | freecs a memory block                              |
-| [ft_free_2d]                  | freecs a two-dimensional array                     |
-| [ft_free_null]                | freecs a memory block and sets it to null         |
+| [ft_memdel]                   | frees a memory block                              |
+| [ft_free_2d]                  | frees a two-dimensional array                     |
+| [ft_free_null]                | frees a memory block and sets it to null         |
 | [ft_hold_mem]                 | hold memory blocks address in a list             |
 
 ## Conversion Functions (to)

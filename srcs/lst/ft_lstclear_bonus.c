@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:03:11 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/03 21:53:55 by daniel           ###   ########.fr       */
+/*   Updated: 2025/06/05 10:04:39 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		head = head->next;
 		if (del)
 			del(temp->content);
-		freec(temp);
+		free(temp);
 		temp = NULL;
 	}
 	*lst = NULL;
 }
 /*
-void freec_content(void *content)
+void free_content(void *content)
 {
-    freec(content);
+    free(content);
 }
 
 int main()
@@ -62,7 +62,7 @@ int main()
         current = current->next;
     }
 
-    ft_lstclear(&head, freec_content);
+    ft_lstclear(&head, free_content);
 
     printf("After clearing:\n");
     current = head;
