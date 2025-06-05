@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: daniel <daniel@student.42.fr>              +#+  +:+       +#+         #
+#    By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/02 14:34:27 by danpalac          #+#    #+#              #
-#    Updated: 2025/06/03 22:19:54 by daniel           ###   ########.fr        #
+#    Updated: 2025/06/05 10:23:36 by danpalac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ GET_DIR := get/
 IS_FILES	:= ft_isalpha ft_isalnum ft_isascii ft_isdigit ft_isprint ft_isspace ft_isndup ft_isstrnum
 
 MEM_FILES	:= ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset\
-			   ft_memrev ft_memccpy ft_memdel ft_free_2d ft_free_null ft_hold_mem ft_realloc freec
+			   ft_memrev ft_memccpy ft_memdel ft_free_2d ft_free_null ft_hold_mem ft_realloc
 			   
 PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_successful ft_putstr_color_fd\
 				ft_putaddr_fd ft_putbase_fd ft_puthexa_fd ft_putunsigned_fd
@@ -104,7 +104,7 @@ PUT_FILES	:= ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd ft_error ft_s
 TO_FILES	:= ft_atoi ft_itoa ft_atol ft_atoll ft_tolower ft_toupper ft_bin2char ft_char2bin ft_bintoa ft_atobin
 
 STR_FILES	:= ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strcspn ft_strmapi ft_strncmp \
-			ft_strnstr ft_strrchr ft_strtrim ft_strrev ft_substr ft_strrncmp ft_strtok ft_straddc
+			ft_strnstr ft_strrchr ft_strtrim ft_strrev ft_substr ft_strrncmp ft_strtok ft_straddc ft_strequ
 
 LST_FILES	:= ft_lstnew_bonus ft_lstadd_front_bonus ft_lstsize_bonus ft_lstlast_bonus ft_lstadd_back_bonus \
 		  	ft_lstdelone_bonus ft_lstclear_bonus ft_lstiter_bonus ft_lstmap_bonus ft_lstfind_bonus
