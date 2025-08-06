@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:59:22 by danpalac          #+#    #+#             */
-/*   Updated: 2025/06/05 10:20:25 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/08/06 10:53:23 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ char	*ft_strrchr(char const *str, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 int		ft_strrncmp(const char *s1, const char *s2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-int 	ft_strequ(const char *s1, const char *s2);
+int		ft_strequ(const char *s1, const char *s2);
 
 /* ************************************************************************** */
 /*                                   LIST                                     */

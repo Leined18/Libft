@@ -6,7 +6,7 @@
 /*   By: danpalac <danpalac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:22:30 by danpalac          #+#    #+#             */
-/*   Updated: 2025/05/14 13:27:27 by danpalac         ###   ########.fr       */
+/*   Updated: 2025/08/06 10:53:18 by danpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstfind(t_list *lst, void *data_ref)
 {
-	t_list *current;
-	
+	t_list	*current;
+
 	if (!lst || !data_ref)
 		return (NULL);
 	current = lst;
